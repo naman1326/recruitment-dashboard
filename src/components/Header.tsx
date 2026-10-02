@@ -6,12 +6,14 @@ import {
   Share2, 
   RefreshCw, 
   FileSpreadsheet, 
-  FileText
+  FileText,
+  Cloud
 } from 'lucide-react';
 import { Candidate, PanelConfig, PanelType } from '../types';
 import { exportToExcel, exportToCSV } from '../utils/excelParser';
 import { createShareableUrl } from '../utils/shareUtils';
 import { useToast } from './Toast';
+import { SyncStatus } from '../hooks/useCloudSync';
 
 interface HeaderProps {
   candidates: Candidate[];
@@ -19,6 +21,9 @@ interface HeaderProps {
   onOpenImport: () => void;
   onOpenAddCandidate: () => void;
   onResetData: () => void;
+  onOpenSync: () => void;
+  syncStatus: SyncStatus;
+  roomId: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -26,7 +31,10 @@ export const Header: React.FC<HeaderProps> = ({
   panelConfigs,
   onOpenImport,
   onOpenAddCandidate,
-  onResetData
+  onResetData,
+  onOpenSync,
+  syncStatus,
+  roomId
 }) => {
   const { showToast } = useToast();
   const [currentTime, setCurrentTime] = useState<string>('');
@@ -107,6 +115,26 @@ export const Header: React.FC<HeaderProps> = ({
               {currentTime}
             </span>
           </div>
+
+          {/* Cloud Sync Status Indicator */}
+          <button
+            type="button"
+            className="action-btn"
+            onClick={onOpenSync}
+            title="Multi-Device Cloud Sync Status (Click to view/change room)"
+            style={{
+              borderColor: syncStatus === 'offline' ? 'rgba(226, 73, 58, 0.4)' : 'rgba(31, 174, 95, 0.4)',
+              background: syncStatus === 'offline' ? 'rgba(226, 73, 58, 0.1)' : 'rgba(31, 174, 95, 0.1)'
+            }}
+          >
+            <Cloud size={15} color={syncStatus === 'offline' ? '#e2493a' : syncStatus === 'syncing' ? 'var(--brand-saffron)' : 'var(--confirm)'} />
+            <span style={{ color: syncStatus === 'offline' ? '#e2493a' : 'var(--confirm)', fontWeight: 700 }}>
+              {syncStatus === 'syncing' ? 'Syncing...' : syncStatus === 'offline' ? 'Offline' : 'Cloud Synced'}
+            </span>
+            <span style={{ color: 'var(--text-muted)', fontSize: '0.72rem' }}>
+              ({roomId})
+            </span>
+          </button>
 
           {/* Import Button */}
           <button 

@@ -9,13 +9,15 @@ interface TableViewProps {
   panelConfigs: Record<PanelType, PanelConfig>;
   onSelectCandidate: (c: Candidate) => void;
   onUpdateStatus: (id: string, s: CandidateStatus) => void;
+  flashingCandidateId?: string | null;
 }
 
 export const TableView: React.FC<TableViewProps> = ({
   candidates,
   panelConfigs,
   onSelectCandidate,
-  onUpdateStatus
+  onUpdateStatus,
+  flashingCandidateId
 }) => {
   const { showToast } = useToast();
 
@@ -62,6 +64,7 @@ export const TableView: React.FC<TableViewProps> = ({
             return (
               <tr 
                 key={c.id}
+                className={flashingCandidateId === c.id ? 'is-flashing' : ''}
                 onClick={() => onSelectCandidate(c)}
               >
                 {/* Index */}

@@ -10,6 +10,7 @@ interface CandidateCardProps {
   onSelectCandidate: (candidate: Candidate) => void;
   onUpdateStatus: (id: string, status: CandidateStatus) => void;
   onMoveSlot: (id: string, slot: TimeSlotType) => void;
+  isFlashing?: boolean;
 }
 
 export const CandidateCard: React.FC<CandidateCardProps> = ({
@@ -17,7 +18,8 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
   panelConfig,
   onSelectCandidate,
   onUpdateStatus,
-  onMoveSlot
+  onMoveSlot,
+  isFlashing
 }) => {
   const { showToast } = useToast();
 
@@ -46,9 +48,13 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
 
   return (
     <div 
-      className="candidate-card"
+      className={`candidate-card ${isFlashing ? 'is-flashing' : ''}`}
       onClick={() => onSelectCandidate(candidate)}
-      style={{ cursor: 'pointer' }}
+      style={{ 
+        cursor: 'pointer',
+        boxShadow: isFlashing ? '0 0 20px rgba(255, 107, 53, 0.45)' : undefined,
+        borderColor: isFlashing ? 'var(--brand-saffron)' : undefined
+      }}
     >
       {/* Top Details */}
       <div className="candidate-card-top">

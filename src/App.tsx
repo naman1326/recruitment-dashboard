@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
   Candidate, 
   CandidateStatus, 
@@ -18,6 +18,7 @@ import {
   PANELS_STORAGE_KEY 
 } from './constants/panels';
 import { hydrateFromShareUrl } from './utils/shareUtils';
+import { useCloudSync } from './hooks/useCloudSync';
 import { Header } from './components/Header';
 import { PanelBanner } from './components/PanelBanner';
 import { StatsStrip } from './components/StatsStrip';
@@ -27,6 +28,7 @@ import { TableView } from './components/TableView';
 import { CandidateDetailModal } from './components/CandidateDetailModal';
 import { AddCandidateModal } from './components/AddCandidateModal';
 import { ImportModal } from './components/ImportModal';
+import { SyncModal } from './components/SyncModal';
 import { ToastProvider, useToast } from './components/Toast';
 
 const DashboardContent: React.FC = () => {
@@ -61,6 +63,42 @@ const DashboardContent: React.FC = () => {
     return INITIAL_PANEL_CONFIGS;
   });
 
+  // Active Modals
+  const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
+  const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
+
+  // Cloud Sync Integration (Zero Database Required)
+  const handleApplyRemoteCandidates = useCallback((remoteCandidates: Candidate[]) => {
+    setCandidates(remoteCandidates);
+  }, []);
+
+  const handleRemoteCandidateChanged = useCallback((changed: Candidate, old?: Candidate) => {
+    if (old && old.status !== changed.status) {
+      showToast(`⚡ Live update: ${changed.name} marked ${changed.status.toUpperCase()} (${changed.panel})`);
+    } else if (old && old.score !== changed.score && changed.score !== undefined) {
+      showToast(`⚡ Live update: ${changed.name} score updated to ${changed.score}/10`);
+    } else {
+      showToast(`⚡ Live update: ${changed.name} updated from another device`);
+    }
+  }, [showToast]);
+
+  const {
+    roomId,
+    setRoomId,
+    syncStatus,
+    lastSyncTime,
+    flashingCandidateId,
+    forceSyncNow,
+    pushUpdate,
+    pushFullSchedule
+  } = useCloudSync({
+    candidates,
+    onApplyRemoteCandidates: handleApplyRemoteCandidates,
+    onCandidateChangedRemotely: handleRemoteCandidateChanged
+  });
+
   // Filter and View state
   const [filters, setFilters] = useState<FilterState>({
     searchQuery: '',
@@ -69,11 +107,6 @@ const DashboardContent: React.FC = () => {
     selectedStatus: 'ALL',
     viewMode: 'by-slot'
   });
-
-  // Active Modals
-  const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
 
   // Check URL hash for shared data on initial load
   useEffect(() => {
@@ -84,11 +117,12 @@ const DashboardContent: React.FC = () => {
         if (shared.panelConfigs) {
           setPanelConfigs(shared.panelConfigs);
         }
+        pushFullSchedule(shared.candidates);
         showToast(`Hydrated ${shared.candidates.length} candidates from shared link!`);
       }
     };
     loadShared();
-  }, [showToast]);
+  }, [showToast, pushFullSchedule]);
 
   // Persist candidates whenever modified
   useEffect(() => {
@@ -110,30 +144,51 @@ const DashboardContent: React.FC = () => {
 
   // Candidate updates
   const handleUpdateStatus = (id: string, newStatus: CandidateStatus) => {
-    setCandidates(prev => 
-      prev.map(c => (c.id === id ? { ...c, status: newStatus, updatedAt: new Date().toISOString() } : c))
-    );
+    const target = candidates.find(c => c.id === id);
+    if (target) {
+      const updated: Candidate = {
+        ...target,
+        status: newStatus,
+        updatedAt: new Date().toISOString()
+      };
+      setCandidates(prev => prev.map(c => c.id === id ? updated : c));
+      pushUpdate(updated);
+    }
   };
 
   const handleMoveSlot = (id: string, newSlot: TimeSlotType) => {
-    setCandidates(prev =>
-      prev.map(c => (c.id === id ? { ...c, timeSlot: newSlot, updatedAt: new Date().toISOString() } : c))
-    );
-    showToast(`Candidate moved to ${newSlot}`);
+    const target = candidates.find(c => c.id === id);
+    if (target) {
+      const updated: Candidate = {
+        ...target,
+        timeSlot: newSlot,
+        updatedAt: new Date().toISOString()
+      };
+      setCandidates(prev => prev.map(c => c.id === id ? updated : c));
+      pushUpdate(updated);
+      showToast(`Candidate moved to ${newSlot}`);
+    }
   };
 
   const handleUpdateCandidate = (updated: Candidate) => {
-    setCandidates(prev =>
-      prev.map(c => (c.id === updated.id ? updated : c))
-    );
+    const updatedWithTime: Candidate = {
+      ...updated,
+      updatedAt: new Date().toISOString()
+    };
+    setCandidates(prev => prev.map(c => c.id === updated.id ? updatedWithTime : c));
+    pushUpdate(updatedWithTime);
   };
 
   const handleDeleteCandidate = (id: string) => {
-    setCandidates(prev => prev.filter(c => c.id !== id));
+    const nextList = candidates.filter(c => c.id !== id);
+    setCandidates(nextList);
+    pushFullSchedule(nextList);
   };
 
   const handleAddCandidate = (newCandidate: Candidate) => {
-    setCandidates(prev => [newCandidate, ...prev]);
+    const nextList = [newCandidate, ...candidates];
+    setCandidates(nextList);
+    pushFullSchedule(nextList);
   };
 
   const handleImportSuccess = (
@@ -141,11 +196,9 @@ const DashboardContent: React.FC = () => {
     mode: 'replace' | 'append',
     parsedInterviewers?: Partial<Record<PanelType, string[]>>
   ) => {
-    if (mode === 'replace') {
-      setCandidates(importedCandidates);
-    } else {
-      setCandidates(prev => [...prev, ...importedCandidates]);
-    }
+    const nextList = mode === 'replace' ? importedCandidates : [...candidates, ...importedCandidates];
+    setCandidates(nextList);
+    pushFullSchedule(nextList);
 
     if (parsedInterviewers && Object.keys(parsedInterviewers).length > 0) {
       setPanelConfigs(prev => {
@@ -168,6 +221,7 @@ const DashboardContent: React.FC = () => {
     if (window.confirm('Reset candidate schedule back to initial 114 candidates from panel.xlsx?')) {
       setCandidates(INITIAL_CANDIDATES);
       setPanelConfigs(INITIAL_PANEL_CONFIGS);
+      pushFullSchedule(INITIAL_CANDIDATES);
       try {
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(PANELS_STORAGE_KEY);
@@ -222,6 +276,9 @@ const DashboardContent: React.FC = () => {
         onOpenImport={() => setIsImportModalOpen(true)}
         onOpenAddCandidate={() => setIsAddModalOpen(true)}
         onResetData={handleResetData}
+        onOpenSync={() => setIsSyncModalOpen(true)}
+        syncStatus={syncStatus}
+        roomId={roomId}
       />
 
       {/* 4 Panels Banner with Interviewers */}
@@ -266,10 +323,8 @@ const DashboardContent: React.FC = () => {
       {filters.viewMode === 'by-slot' && (
         <div className="slots-container">
           {TIME_SLOTS.map(slot => {
-            // Find candidates belonging to this slot
             const slotCandidates = filteredCandidates.filter(c => c.timeSlot === slot.id);
 
-            // Hide slot if filtered out or empty under current filters
             if (filters.selectedSlot !== 'ALL' && filters.selectedSlot !== slot.id) {
               return null;
             }
@@ -302,6 +357,7 @@ const DashboardContent: React.FC = () => {
                         onSelectCandidate={setSelectedCandidate}
                         onUpdateStatus={handleUpdateStatus}
                         onMoveSlot={handleMoveSlot}
+                        isFlashing={flashingCandidateId === c.id}
                       />
                     ))}
                   </div>
@@ -357,6 +413,7 @@ const DashboardContent: React.FC = () => {
                         onSelectCandidate={setSelectedCandidate}
                         onUpdateStatus={handleUpdateStatus}
                         onMoveSlot={handleMoveSlot}
+                        isFlashing={flashingCandidateId === c.id}
                       />
                     ))
                   ) : (
@@ -377,6 +434,7 @@ const DashboardContent: React.FC = () => {
           panelConfigs={panelConfigs}
           onSelectCandidate={setSelectedCandidate}
           onUpdateStatus={handleUpdateStatus}
+          flashingCandidateId={flashingCandidateId}
         />
       )}
 
@@ -401,6 +459,19 @@ const DashboardContent: React.FC = () => {
         isOpen={isImportModalOpen}
         onClose={() => setIsImportModalOpen(false)}
         onImportSuccess={handleImportSuccess}
+      />
+
+      {/* Multi-Device Cloud Sync Modal */}
+      <SyncModal
+        isOpen={isSyncModalOpen}
+        onClose={() => setIsSyncModalOpen(false)}
+        roomId={roomId}
+        onUpdateRoomId={setRoomId}
+        syncStatus={syncStatus}
+        lastSyncTime={lastSyncTime}
+        totalCandidates={candidates.length}
+        onForceSync={forceSyncNow}
+        onPushAllToCloud={() => pushFullSchedule(candidates)}
       />
     </div>
   );
