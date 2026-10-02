@@ -49,6 +49,8 @@ export const TableView: React.FC<TableViewProps> = ({
             <th>Time Slot</th>
             <th>Status</th>
             <th>Domain Preferences</th>
+            <th style={{ minWidth: '220px' }}>Why Good Fit & Skills</th>
+            <th style={{ minWidth: '220px' }}>Why Swarajya</th>
             <th>Contact</th>
             <th style={{ textAlign: 'right' }}>Actions</th>
           </tr>
@@ -158,6 +160,38 @@ export const TableView: React.FC<TableViewProps> = ({
                     {!c.domainPref1 && !c.domainPref2 && (
                       <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>—</span>
                     )}
+                  </div>
+                </td>
+
+                {/* Why Good Fit */}
+                <td style={{ maxWidth: '240px' }} title={c.fitReason || ''}>
+                  <div style={{ 
+                    fontSize: '0.78rem', 
+                    color: 'var(--text-secondary)', 
+                    overflow: 'hidden', 
+                    textOverflow: 'ellipsis', 
+                    display: '-webkit-box', 
+                    WebkitLineClamp: 2, 
+                    WebkitBoxOrient: 'vertical',
+                    lineHeight: 1.35
+                  }}>
+                    {c.fitReason || <span style={{ color: 'var(--text-muted)' }}>—</span>}
+                  </div>
+                </td>
+
+                {/* Why Swarajya */}
+                <td style={{ maxWidth: '240px' }} title={c.clubMotivation || ''}>
+                  <div style={{ 
+                    fontSize: '0.78rem', 
+                    color: 'var(--text-secondary)', 
+                    overflow: 'hidden', 
+                    textOverflow: 'ellipsis', 
+                    display: '-webkit-box', 
+                    WebkitLineClamp: 2, 
+                    WebkitBoxOrient: 'vertical',
+                    lineHeight: 1.35
+                  }}>
+                    {c.clubMotivation || <span style={{ color: 'var(--text-muted)' }}>—</span>}
                   </div>
                 </td>
 

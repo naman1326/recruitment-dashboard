@@ -19,6 +19,10 @@ dist-ssr/
 .env
 .env.*
 
+# Large binary office docs
+slots/
+*Responses*.xlsx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

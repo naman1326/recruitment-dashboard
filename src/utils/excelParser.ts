@@ -206,7 +206,18 @@ export function exportToExcel(candidates: Candidate[], panelConfigs: Record<Pane
     rows.push(interviewers);
 
     // Header row 2: Column labels
-    rows.push(['Name', 'Roll No', 'Status', 'Mobile', 'Domain Pref 1', 'Domain Pref 2', 'Time Slot', 'Notes']);
+    rows.push([
+      'Name', 
+      'Roll No', 
+      'Status', 
+      'Mobile', 
+      'Domain Pref 1', 
+      'Domain Pref 2', 
+      'Why Good Fit & Skills',
+      'Why Swarajya Club',
+      'Time Slot', 
+      'Notes'
+    ]);
 
     // Data rows
     for (const c of panelCandidates) {
@@ -217,6 +228,8 @@ export function exportToExcel(candidates: Candidate[], panelConfigs: Record<Pane
         c.mobile,
         c.domainPref1 || '',
         c.domainPref2 || '',
+        c.fitReason || '',
+        c.clubMotivation || '',
         c.timeSlot,
         c.notes || ''
       ]);
@@ -239,6 +252,8 @@ export function exportToCSV(candidates: Candidate[]) {
     Mobile: c.mobile,
     Domain1: c.domainPref1 || '',
     Domain2: c.domainPref2 || '',
+    WhyGoodFit: c.fitReason || '',
+    WhySwarajya: c.clubMotivation || '',
     Status: c.status,
     Notes: c.notes || ''
   }));

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Phone, MessageSquare, Copy, Clock, Award, Tag } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, MessageSquare, Copy, Clock, Award, Tag, FileText, ChevronDown } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, TimeSlotType } from '../types';
 import { STATUS_CONFIG, TIME_SLOTS } from '../constants/panels';
 import { useToast } from './Toast';
@@ -22,6 +22,7 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
   isFlashing
 }) => {
   const { showToast } = useToast();
+  const [showAnswers, setShowAnswers] = useState(false);
 
   const getInitials = (name: string) => {
     const parts = name.trim().split(/\s+/);
@@ -113,6 +114,86 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
           </span>
         )}
       </div>
+
+      {/* Questionnaire Form Answers Accordion */}
+      {(candidate.fitReason || candidate.clubMotivation) && (
+        <div style={{ marginTop: '0.2rem' }}>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowAnswers(!showAnswers);
+            }}
+            style={{
+              background: 'rgba(255, 255, 255, 0.04)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '6px',
+              padding: '4px 8px',
+              fontSize: '0.72rem',
+              color: showAnswers ? 'var(--brand-saffron)' : 'var(--text-secondary)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              width: '100%',
+              justifyContent: 'space-between',
+              cursor: 'pointer'
+            }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <FileText size={12} color="var(--brand-saffron)" />
+              <span>Application Answers ({showAnswers ? 'Hide' : 'View'})</span>
+            </span>
+            <ChevronDown 
+              size={13} 
+              style={{ 
+                transform: showAnswers ? 'rotate(180deg)' : 'none', 
+                transition: 'transform 0.2s ease' 
+              }} 
+            />
+          </button>
+
+          {showAnswers && (
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                marginTop: '6px',
+                padding: '8px',
+                borderRadius: '8px',
+                backgroundColor: 'rgba(10, 8, 7, 0.65)',
+                border: '1px solid rgba(255, 107, 53, 0.25)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '8px',
+                fontSize: '0.74rem',
+                lineHeight: 1.4,
+                maxHeight: '180px',
+                overflowY: 'auto'
+              }}
+            >
+              {candidate.fitReason && (
+                <div>
+                  <div style={{ fontWeight: 700, color: 'var(--brand-saffron-alt)', fontSize: '0.7rem', marginBottom: '2px' }}>
+                    Why Good Fit:
+                  </div>
+                  <div style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
+                    {candidate.fitReason}
+                  </div>
+                </div>
+              )}
+              {candidate.clubMotivation && (
+                <div style={{ borderTop: candidate.fitReason ? '1px solid rgba(255, 255, 255, 0.06)' : undefined, paddingTop: candidate.fitReason ? '6px' : undefined }}>
+                  <div style={{ fontWeight: 700, color: '#38bdf8', fontSize: '0.7rem', marginBottom: '2px' }}>
+                    Why Swarajya:
+                  </div>
+                  <div style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
+                    {candidate.clubMotivation}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Time Slot Info & Quick Slot Reassignment */}
       <div 

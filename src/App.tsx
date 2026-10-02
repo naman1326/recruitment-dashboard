@@ -258,7 +258,9 @@ const DashboardContent: React.FC = () => {
         const matchesPhone = c.mobile.includes(q);
         const matchesDomain1 = c.domainPref1?.toLowerCase().includes(q) ?? false;
         const matchesDomain2 = c.domainPref2?.toLowerCase().includes(q) ?? false;
-        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2) {
+        const matchesFit = c.fitReason?.toLowerCase().includes(q) ?? false;
+        const matchesMot = c.clubMotivation?.toLowerCase().includes(q) ?? false;
+        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2 && !matchesFit && !matchesMot) {
           return false;
         }
       }

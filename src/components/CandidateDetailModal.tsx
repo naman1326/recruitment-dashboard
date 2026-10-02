@@ -5,7 +5,9 @@ import {
   MessageSquare, 
   Copy, 
   Trash2, 
-  Save
+  Save,
+  Sparkles,
+  HelpCircle
 } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, PanelType, TimeSlotType } from '../types';
 import { TIME_SLOTS, PANEL_LIST, STATUS_CONFIG } from '../constants/panels';
@@ -36,6 +38,8 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
   const [timeSlot, setTimeSlot] = useState<TimeSlotType>(candidate.timeSlot);
   const [domainPref1, setDomainPref1] = useState(candidate.domainPref1 || '');
   const [domainPref2, setDomainPref2] = useState(candidate.domainPref2 || '');
+  const fitReason = candidate.fitReason || '';
+  const clubMotivation = candidate.clubMotivation || '';
   const [status, setStatus] = useState<CandidateStatus>(candidate.status);
   const [score, setScore] = useState<number | undefined>(candidate.score);
   const [notes, setNotes] = useState(candidate.notes || '');
@@ -64,6 +68,8 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
       timeSlot,
       domainPref1: domainPref1.trim() || undefined,
       domainPref2: domainPref2.trim() || undefined,
+      fitReason: fitReason.trim() || undefined,
+      clubMotivation: clubMotivation.trim() || undefined,
       status,
       score,
       notes,
@@ -296,6 +302,55 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
                 value={domainPref2}
                 onChange={(e) => setDomainPref2(e.target.value)}
               />
+            </div>
+          </div>
+
+          {/* Candidate Form Responses (Why Good Fit & Club Motivation) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            {/* Question 1: Good Fit */}
+            <div 
+              style={{
+                padding: '0.9rem 1rem',
+                backgroundColor: 'rgba(255, 107, 53, 0.05)',
+                border: '1px solid rgba(255, 107, 53, 0.25)',
+                borderRadius: '14px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.35rem'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', fontWeight: 700, color: 'var(--brand-saffron)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <HelpCircle size={15} /> Why a Good Fit & Relevant Skills
+              </div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '2px', lineHeight: 1.35 }}>
+                What makes you a good fit for the department(s) you have selected? Feel free to share any relevant skills, experiences, or previous work that align with your preferred department.
+              </div>
+              <div style={{ fontSize: '0.86rem', color: 'var(--text-primary)', whiteSpace: 'pre-line', lineHeight: 1.5, backgroundColor: 'var(--input-bg)', padding: '0.75rem', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+                {fitReason ? fitReason : <span style={{ color: 'var(--text-muted)' }}>No response provided.</span>}
+              </div>
+            </div>
+
+            {/* Question 2: Why Swarajya */}
+            <div 
+              style={{
+                padding: '0.9rem 1rem',
+                backgroundColor: 'rgba(56, 189, 248, 0.05)',
+                border: '1px solid rgba(56, 189, 248, 0.25)',
+                borderRadius: '14px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.35rem'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', fontWeight: 700, color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <Sparkles size={15} /> What Excites You About Swarajya - MLA Club
+              </div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '2px', lineHeight: 1.35 }}>
+                What excites or fascinates you about joining the Swarajya - MLA Club?
+              </div>
+              <div style={{ fontSize: '0.86rem', color: 'var(--text-primary)', whiteSpace: 'pre-line', lineHeight: 1.5, backgroundColor: 'var(--input-bg)', padding: '0.75rem', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+                {clubMotivation ? clubMotivation : <span style={{ color: 'var(--text-muted)' }}>No response provided.</span>}
+              </div>
             </div>
           </div>
 
