@@ -45,5 +45,6 @@ export const STATUS_CONFIG: Record<CandidateStatus, { label: string; color: stri
   }
 };
 
-export const STORAGE_KEY = 'recruitment_interview_members_v1';
+export const STORAGE_KEY = 'recruitment_interview_members_v2';
 export const PANELS_STORAGE_KEY = 'recruitment_interview_panels_v1';
+

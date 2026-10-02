@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   X, 
   Phone, 
@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, PanelType, TimeSlotType } from '../types';
 import { TIME_SLOTS, PANEL_LIST, STATUS_CONFIG } from '../constants/panels';
+import { INITIAL_CANDIDATES } from '../constants/initialData';
 import { useToast } from './Toast';
 
 interface CandidateDetailModalProps {
@@ -38,8 +39,17 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
   const [timeSlot, setTimeSlot] = useState<TimeSlotType>(candidate.timeSlot);
   const [domainPref1, setDomainPref1] = useState(candidate.domainPref1 || '');
   const [domainPref2, setDomainPref2] = useState(candidate.domainPref2 || '');
-  const fitReason = candidate.fitReason || '';
-  const clubMotivation = candidate.clubMotivation || '';
+
+  const initialMatch = useMemo(() => {
+    return INITIAL_CANDIDATES.find(c => 
+      c.id === candidate.id || 
+      (candidate.rollNo && c.rollNo && c.rollNo.toLowerCase() === candidate.rollNo.toLowerCase()) || 
+      c.name.toLowerCase() === candidate.name.toLowerCase()
+    );
+  }, [candidate]);
+
+  const fitReason = candidate.fitReason || initialMatch?.fitReason || '';
+  const clubMotivation = candidate.clubMotivation || initialMatch?.clubMotivation || '';
   const [status, setStatus] = useState<CandidateStatus>(candidate.status);
   const [score, setScore] = useState<number | undefined>(candidate.score);
   const [notes, setNotes] = useState(candidate.notes || '');

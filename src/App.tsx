@@ -37,11 +37,27 @@ const DashboardContent: React.FC = () => {
   // Candidates state with LocalStorage persistence
   const [candidates, setCandidates] = useState<Candidate[]>(() => {
     try {
+      // Clear legacy v1 storage if present to avoid stale schema
+      localStorage.removeItem('recruitment_interview_members_v1');
+
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          const initMap = new Map(INITIAL_CANDIDATES.map(c => [c.id, c]));
+          return parsed.map((c: Candidate) => {
+            const init = initMap.get(c.id) || INITIAL_CANDIDATES.find(i => 
+              (c.rollNo && i.rollNo && i.rollNo.toLowerCase() === c.rollNo.toLowerCase()) || 
+              i.name.toLowerCase() === c.name.toLowerCase()
+            );
+            return {
+              ...init,
+              ...c,
+              fitReason: c.fitReason || init?.fitReason || '',
+              clubMotivation: c.clubMotivation || init?.clubMotivation || '',
+              timeSlot: c.timeSlot || init?.timeSlot || '10:00 - 10:30 AM'
+            };
+          });
         }
       }
     } catch (e) {

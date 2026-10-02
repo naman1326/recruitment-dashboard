@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Candidate } from '../types';
+import { INITIAL_CANDIDATES } from '../constants/initialData';
 import { 
   getCurrentRoomId, 
   setCurrentRoomId, 
@@ -50,9 +51,11 @@ export function useCloudSync({
     setSyncStatus('syncing');
 
     try {
-      const remote = await fetchRemoteSchedule(roomId);
+      const rawRemote = await fetchRemoteSchedule(roomId);
 
-      if (!remote || remote.length === 0) {
+      const initMap = new Map(INITIAL_CANDIDATES.map(c => [c.id, c]));
+
+      if (!rawRemote || rawRemote.length === 0) {
         // If room is empty on cloud, seed with current local candidates
         if (isInitial || !hasInitializedRef.current) {
           await pushRemoteSchedule(candidatesRef.current, roomId);
@@ -65,6 +68,20 @@ export function useCloudSync({
       }
 
       hasInitializedRef.current = true;
+
+      // Hydrate remote candidates with questionnaire fields from INITIAL_CANDIDATES
+      const remote = rawRemote.map(rem => {
+        const init = initMap.get(rem.id) || INITIAL_CANDIDATES.find(i => 
+          (rem.rollNo && i.rollNo && i.rollNo.toLowerCase() === rem.rollNo.toLowerCase()) || 
+          i.name.toLowerCase() === rem.name.toLowerCase()
+        );
+        return {
+          ...init,
+          ...rem,
+          fitReason: rem.fitReason || init?.fitReason || '',
+          clubMotivation: rem.clubMotivation || init?.clubMotivation || '',
+        };
+      });
 
       // Detect differences and merge
       const localMap = new Map(candidatesRef.current.map(c => [c.id, c]));
@@ -92,17 +109,44 @@ export function useCloudSync({
         const isNotesDifferent = (rem.notes || '') !== (loc.notes || '');
         const isSlotDifferent = rem.timeSlot !== loc.timeSlot;
 
+        const init = initMap.get(rem.id) || INITIAL_CANDIDATES.find(i => 
+          (rem.rollNo && i.rollNo && i.rollNo.toLowerCase() === rem.rollNo.toLowerCase()) || 
+          i.name.toLowerCase() === rem.name.toLowerCase()
+        );
+
         if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent) {
           if (remTime >= locTime) {
-            merged.push(rem);
+            const chosen: Candidate = {
+              ...init,
+              ...rem,
+              fitReason: rem.fitReason || loc.fitReason || init?.fitReason || '',
+              clubMotivation: rem.clubMotivation || loc.clubMotivation || init?.clubMotivation || '',
+            };
+            merged.push(chosen);
             hasChanges = true;
-            lastChangedCandidate = rem;
+            lastChangedCandidate = chosen;
             lastOldCandidate = loc;
           } else {
-            merged.push(loc);
+            const chosen: Candidate = {
+              ...init,
+              ...loc,
+              fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
+              clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
+            };
+            merged.push(chosen);
           }
         } else {
-          merged.push(loc);
+          // Keep current state but ensure questionnaire answers are populated
+          const chosen: Candidate = {
+            ...init,
+            ...loc,
+            fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
+            clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
+          };
+          if (!loc.fitReason && chosen.fitReason) {
+            hasChanges = true;
+          }
+          merged.push(chosen);
         }
       }
 

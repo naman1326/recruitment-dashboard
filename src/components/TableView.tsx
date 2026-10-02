@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Phone, MessageSquare, Copy, Edit3, Tag } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, PanelType } from '../types';
 import { STATUS_CONFIG } from '../constants/panels';
+import { INITIAL_CANDIDATES } from '../constants/initialData';
 import { useToast } from './Toast';
 
 interface TableViewProps {
@@ -20,6 +21,7 @@ export const TableView: React.FC<TableViewProps> = ({
   flashingCandidateId
 }) => {
   const { showToast } = useToast();
+  const initMap = useMemo(() => new Map(INITIAL_CANDIDATES.map(i => [i.id, i])), []);
 
   const handleCopyPhone = (e: React.MouseEvent, mobile: string, name: string) => {
     e.stopPropagation();
@@ -62,6 +64,13 @@ export const TableView: React.FC<TableViewProps> = ({
             const waUrl = cleanPhone 
               ? `https://wa.me/91${cleanPhone}?text=${encodeURIComponent(`Hello ${c.name}, this is from Swarajya recruitment team. Your interview with ${c.panel} is scheduled for ${c.timeSlot}. Please report on time.`)}`
               : '#';
+
+            const init = initMap.get(c.id) || INITIAL_CANDIDATES.find(i => 
+              (c.rollNo && i.rollNo && i.rollNo.toLowerCase() === c.rollNo.toLowerCase()) || 
+              i.name.toLowerCase() === c.name.toLowerCase()
+            );
+            const fitReason = c.fitReason || init?.fitReason || '';
+            const clubMotivation = c.clubMotivation || init?.clubMotivation || '';
 
             return (
               <tr 
@@ -164,7 +173,7 @@ export const TableView: React.FC<TableViewProps> = ({
                 </td>
 
                 {/* Why Good Fit */}
-                <td style={{ maxWidth: '240px' }} title={c.fitReason || ''}>
+                <td style={{ maxWidth: '240px' }} title={fitReason || ''}>
                   <div style={{ 
                     fontSize: '0.78rem', 
                     color: 'var(--text-secondary)', 
@@ -175,12 +184,12 @@ export const TableView: React.FC<TableViewProps> = ({
                     WebkitBoxOrient: 'vertical',
                     lineHeight: 1.35
                   }}>
-                    {c.fitReason || <span style={{ color: 'var(--text-muted)' }}>—</span>}
+                    {fitReason || <span style={{ color: 'var(--text-muted)' }}>—</span>}
                   </div>
                 </td>
 
                 {/* Why Swarajya */}
-                <td style={{ maxWidth: '240px' }} title={c.clubMotivation || ''}>
+                <td style={{ maxWidth: '240px' }} title={clubMotivation || ''}>
                   <div style={{ 
                     fontSize: '0.78rem', 
                     color: 'var(--text-secondary)', 
@@ -191,7 +200,7 @@ export const TableView: React.FC<TableViewProps> = ({
                     WebkitBoxOrient: 'vertical',
                     lineHeight: 1.35
                   }}>
-                    {c.clubMotivation || <span style={{ color: 'var(--text-muted)' }}>—</span>}
+                    {clubMotivation || <span style={{ color: 'var(--text-muted)' }}>—</span>}
                   </div>
                 </td>
 

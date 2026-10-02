@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Phone, MessageSquare, Copy, Clock, Award, Tag, FileText, ChevronDown } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, TimeSlotType } from '../types';
 import { STATUS_CONFIG, TIME_SLOTS } from '../constants/panels';
+import { INITIAL_CANDIDATES } from '../constants/initialData';
 import { useToast } from './Toast';
 
 interface CandidateCardProps {
@@ -23,6 +24,17 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
 }) => {
   const { showToast } = useToast();
   const [showAnswers, setShowAnswers] = useState(false);
+
+  const initialMatch = useMemo(() => {
+    return INITIAL_CANDIDATES.find(c => 
+      c.id === candidate.id || 
+      (candidate.rollNo && c.rollNo && c.rollNo.toLowerCase() === candidate.rollNo.toLowerCase()) || 
+      c.name.toLowerCase() === candidate.name.toLowerCase()
+    );
+  }, [candidate]);
+
+  const fitReason = candidate.fitReason || initialMatch?.fitReason || '';
+  const clubMotivation = candidate.clubMotivation || initialMatch?.clubMotivation || '';
 
   const getInitials = (name: string) => {
     const parts = name.trim().split(/\s+/);
@@ -116,7 +128,7 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
       </div>
 
       {/* Questionnaire Form Answers Accordion */}
-      {(candidate.fitReason || candidate.clubMotivation) && (
+      {(fitReason || clubMotivation) && (
         <div style={{ marginTop: '0.2rem' }}>
           <button
             type="button"
@@ -170,23 +182,23 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
                 overflowY: 'auto'
               }}
             >
-              {candidate.fitReason && (
+              {fitReason && (
                 <div>
                   <div style={{ fontWeight: 700, color: 'var(--brand-saffron-alt)', fontSize: '0.7rem', marginBottom: '2px' }}>
                     Why Good Fit:
                   </div>
                   <div style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
-                    {candidate.fitReason}
+                    {fitReason}
                   </div>
                 </div>
               )}
-              {candidate.clubMotivation && (
-                <div style={{ borderTop: candidate.fitReason ? '1px solid rgba(255, 255, 255, 0.06)' : undefined, paddingTop: candidate.fitReason ? '6px' : undefined }}>
+              {clubMotivation && (
+                <div style={{ borderTop: fitReason ? '1px solid rgba(255, 255, 255, 0.06)' : undefined, paddingTop: fitReason ? '6px' : undefined }}>
                   <div style={{ fontWeight: 700, color: '#38bdf8', fontSize: '0.7rem', marginBottom: '2px' }}>
                     Why Swarajya:
                   </div>
                   <div style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
-                    {candidate.clubMotivation}
+                    {clubMotivation}
                   </div>
                 </div>
               )}

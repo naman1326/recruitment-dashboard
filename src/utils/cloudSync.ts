@@ -67,11 +67,20 @@ export async function fetchRemoteSchedule(roomId: string = getCurrentRoomId()): 
  */
 export async function pushRemoteSchedule(candidates: Candidate[], roomId: string = getCurrentRoomId()): Promise<boolean> {
   const cleanRoom = encodeURIComponent(roomId || DEFAULT_ROOM_ID);
+
+  // To prevent HTTP 413 Payload Too Large (MantleDB free limit is 64KB),
+  // omit the large fitReason and clubMotivation questionnaire fields.
+  // The client automatically re-hydrates them from INITIAL_CANDIDATES on fetch!
+  const syncCandidates = candidates.map(c => {
+    const { fitReason, clubMotivation, ...rest } = c;
+    return rest;
+  });
+
   const payload: CloudPayload = {
     room: roomId,
-    version: 1,
+    version: 2,
     updatedAt: new Date().toISOString(),
-    candidates
+    candidates: syncCandidates as Candidate[]
   };
 
   try {
