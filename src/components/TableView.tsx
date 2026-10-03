@@ -40,7 +40,11 @@ export const TableView: React.FC<TableViewProps> = ({
   }
 
   return (
-    <div className="grid-scroll">
+    <div>
+      <div className="mobile-table-hint">
+        ← Swipe horizontally to view full table columns →
+      </div>
+      <div className="grid-scroll">
       <table className="participant-table">
         <thead>
           <tr>
@@ -262,5 +266,6 @@ export const TableView: React.FC<TableViewProps> = ({
         </tbody>
       </table>
     </div>
-  );
+  </div>
+);
 };
