@@ -67,11 +67,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "10:30 - 11:00 AM",
     "domainPref1": "Design and Content",
     "domainPref2": "Cultural",
-    "fitReason": "My love for design and my pride in my Marathi heritage make me a perfect fit for the design department. While I am constantly developing my technical design skills, I possess a strong creative instinct, an eye for detail, and a solid understanding of what makes a visual layout engaging.\u00a0\nBeing fluent in Marathi means I can creatively play with typography, slogans, and cultural themes without losing their true meaning. I am highly eager to learn, adapt, and collaborate with seniors to design impactful promotional materials that make the Marathi Club stand out on campus.",
+    "fitReason": "My love for design and my pride in my Marathi heritage make me a perfect fit for the design department. While I am constantly developing my technical design skills, I possess a strong creative instinct, an eye for detail, and a solid understanding of what makes a visual layout engaging. \nBeing fluent in Marathi means I can creatively play with typography, slogans, and cultural themes without losing their true meaning. I am highly eager to learn, adapt, and collaborate with seniors to design impactful promotional materials that make the Marathi Club stand out on campus.",
     "clubMotivation": "I am incredibly excited about the prospect of building the physical, on-ground identity of the Swarajya - MLA Club across campus events. My strength lies in traditional art, and I look forward to collaborating with fellow members to create hand-crafted banners, festive displays, and props. The chaotic, collaborative process of bringing a community's vision to life through raw materials is exactly what drives my passion.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:03:29.790Z"
   },
   {
     "id": "panel-1-2",
@@ -82,11 +83,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "10:30 - 11:00 AM",
     "domainPref1": "Design and Content",
     "domainPref2": "Social Media",
-    "fitReason": "Previously have worked under design lead for BGM 26-27 \ud83d\ude09",
-    "clubMotivation": "Marathi \u0932\u094b\u0915",
-    "status": "scheduled",
+    "fitReason": "Previously have worked under design lead for BGM 26-27 😉",
+    "clubMotivation": "Marathi लोक",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:07:36.294Z"
   },
   {
     "id": "panel-1-3",
@@ -99,9 +101,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Cultural",
     "fitReason": "I enjoy turning ideas into visually appealing and meaningful designs. I have an interest in creating posters, presentations, social media creatives, and also I have a hobby to play instruments like Drums, tabla which I can play in the cultural events",
     "clubMotivation": "Opportunity to learn something new, interact with more and more people, explore new dimension in design and cultural, learn new.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:07:25.592Z"
   },
   {
     "id": "panel-1-4",
@@ -113,10 +116,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Technical",
     "domainPref2": "Operations",
     "fitReason": "Technical Department : \nI have strong hands-on experience in full-stack development and AI-integrated projects, along with strong technical, problem-solving, and teamwork skills developed through my roles in Microsoft Innovations Club and ProdInno Club, as well as multiple hackathons. I enjoy building practical solutions, learning new technologies, and contributing effectively to a team, which makes me a strong fit for the Technical Department.\n\nOperations Department :\nI have hands-on experience in event management and crowd coordination, having worked as a volunteer with the Event Management team during the Swarajya Ganesh Utsav. Managing crowds during Ganesh Aagman Day helped me develop strong coordination, communication, and decision-making skills in a fast-paced environment. I enjoy taking responsibility, working with a team, and ensuring that events run smoothly, which makes me a strong fit for the Operations Department.",
-    "clubMotivation": "What excites me about joining the Swarajya - MLA Club is the opportunity to be part of a community that goes beyond just academics and gives students a sense of belonging \u2014 a home away from home. I look forward to working with like-minded people, taking on meaningful responsibilities, contributing through my skills, and learning through new experiences. I believe the club would be a place where I can both contribute and grow while being part of something bigger than myself.",
-    "status": "scheduled",
+    "clubMotivation": "What excites me about joining the Swarajya - MLA Club is the opportunity to be part of a community that goes beyond just academics and gives students a sense of belonging — a home away from home. I look forward to working with like-minded people, taking on meaningful responsibilities, contributing through my skills, and learning through new experiences. I believe the club would be a place where I can both contribute and grow while being part of something bigger than myself.",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:08:54.433Z"
   },
   {
     "id": "panel-1-5",
@@ -128,10 +132,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Finance And Outreach",
     "domainPref2": "Technical",
     "fitReason": "I believe I would be a good fit for the Finance and Outreach departments because I am organized, responsible, and comfortable communicating with people. I am interested in understanding how events are planned and managed, especially in terms of budgeting, resource allocation, and coordinating with different people.\n\nFor Finance, I am comfortable working with numbers and spreadsheets and paying attention to details. I would be willing to learn how to maintain budgets, track expenses, and manage the financial requirements of events.\n\nFor Outreach, I enjoy interacting with new people and would be comfortable reaching out to students, clubs, and external organizations for collaborations and sponsorships. I am also willing to learn from the team and improve my communication and negotiation skills.\n\nAlthough I am a first-year student and don't have extensive prior experience in these departments, I am eager to learn, take responsibility, and contribute consistently to the club.",
-    "clubMotivation": "What excites me about joining the Swarajya - MLA Club is the opportunity to stay connected with my Maharashtrian roots while being away from home. Coming from Maharashtra, I have always been familiar with its culture, traditions, history, and values, and I would love to be part of a community that celebrates and promotes them.\n\nI am also excited about meeting other students from Maharashtra, learning about their experiences, and contributing to events and initiatives that bring the community together. As a first-year student, I see this club as a great opportunity to make new connections, develop my communication and teamwork skills, and actively contribute to something that I personally connect with.\n\n\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u093e\u092a\u093e\u0938\u0942\u0928 \u0926\u0942\u0930 \u0905\u0938\u0932\u094b, \u0924\u0930\u0940 \u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u093e\u0936\u0940 \u091c\u094b\u0921\u0932\u0947\u0932\u0902 \u0928\u093e\u0924\u0902 \u0915\u093e\u092f\u092e \u092e\u0928\u093e\u0924 \u0930\u093e\u0939\u0940\u0932 \u0906\u0923\u093f \u092f\u093e \u0915\u094d\u0932\u092c\u091a\u093e \u092d\u093e\u0917 \u091d\u093e\u0932\u094d\u092f\u093e\u0935\u0930 \u092e\u0932\u093e \u0905\u0938\u0902 \u0935\u093e\u091f\u0947\u0932 \u0915\u0940 \u092e\u0940 \u0918\u0930\u093e\u092a\u093e\u0938\u0942\u0928 \u0926\u0942\u0930 \u0928\u093e\u0939\u0940\u092f\u0947.",
-    "status": "scheduled",
+    "clubMotivation": "What excites me about joining the Swarajya - MLA Club is the opportunity to stay connected with my Maharashtrian roots while being away from home. Coming from Maharashtra, I have always been familiar with its culture, traditions, history, and values, and I would love to be part of a community that celebrates and promotes them.\n\nI am also excited about meeting other students from Maharashtra, learning about their experiences, and contributing to events and initiatives that bring the community together. As a first-year student, I see this club as a great opportunity to make new connections, develop my communication and teamwork skills, and actively contribute to something that I personally connect with.\n\nमहाराष्ट्रापासून दूर असलो, तरी महाराष्ट्राशी जोडलेलं नातं कायम मनात राहील आणि या क्लबचा भाग झाल्यावर मला असं वाटेल की मी घरापासून दूर नाहीये.",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:12:46.191Z"
   },
   {
     "id": "panel-1-6",
@@ -144,9 +149,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I am a fresher and willing to learn and contribute as much as i can whenever needed, being a beginner i am learning python and have basic knowledge of C. Being a CSE student eventually I will gain knowledge and experience which benefit both the club and myself, also will be gaining experience from the technical works of the club. Other than that I have always been a helping hand during events in my locality and I think it would be a great opportunity for me to work with you guys to make the organized events a success.",
     "clubMotivation": "Being a Maharashtrian it will be a great pride for me to represent Maharashtra and its culture to students from different states. Other than that the energy, enthusiasm, spirit and preparedness this club has for its events is on a greater extent and I would love to be a part of it.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:50:36.595Z"
   },
   {
     "id": "panel-1-7",
@@ -159,9 +165,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I m interested in finance and I m a day scholar frm Pune. So I can speak both tamil and marathi so might be helpful for u guys",
     "clubMotivation": "Getting to know other marathi people and culture",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T06:04:27.587Z"
   },
   {
     "id": "panel-1-8",
@@ -174,9 +181,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "Well im a little extrovert kinda and i can talk with confidence and pitch out ideas etc which i feel helps me a lot in finance and outreach.\nWhile i am really sure that i fit gr8 for design and content as its my hobby and I've been doing it since childhood, for the record i passed elementary and intermediate with A grade.",
     "clubMotivation": "Well the club is very visually appealing and me being a maharashtrian for sure thought to not miss this chance i mean why not. I might also get to know with some more neighbourly ppl",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:58:29.128Z"
   },
   {
     "id": "panel-1-9",
@@ -189,9 +197,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Cultural",
     "fitReason": "I am a good fit since I am good in skecthing and decoration skills. I have also been a part of BGM design department.",
     "clubMotivation": "I am a Maharashtrian and it's culture has always been fascinating for me. I want to be a part of further cultural activities and events of the club.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T06:04:21.806Z"
   },
   {
     "id": "panel-1-10",
@@ -204,9 +213,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "For Design and Content Dept.,I have used Filmora,Premiere Pro for base level and can use Canva and some tools of Photoshop only.",
     "clubMotivation": "To feel sense of belonging with fellow Marathi people and to present my own culture or roots to the diverse campus,making Swarajya's presence and thus Maharashtra's presence beautiful and memorable.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T06:15:17.096Z"
   },
   {
     "id": "panel-1-11",
@@ -248,7 +258,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Technical",
     "domainPref2": "Design and Content",
     "fitReason": "I believe I would be a good fit for the Technical and Design & Content departments because I enjoy both problem-solving and creativity. As a CSE student, I have an interest in programming, learning new technologies, and working on technical projects. I also enjoy designing and presenting ideas in a clear and visually appealing way. I am comfortable learning new tools, working with a team, and taking initiative when needed. I feel that the combination of my technical mindset and creative side would allow me to contribute effectively to both departments while also giving me an opportunity to improve my skills and learn from others.",
-    "clubMotivation": "What excites me most about joining the Swarajya \u2013 MLA Club is its reputation as one of the most renowned and active clubs on campus. I\u2019m fascinated by the way the club organizes engaging and impactful events that bring students together. I would love to be part of that environment, contribute my skills, learn from the team, and gain experience by working behind the scenes to create exciting events.",
+    "clubMotivation": "What excites me most about joining the Swarajya – MLA Club is its reputation as one of the most renowned and active clubs on campus. I’m fascinated by the way the club organizes engaging and impactful events that bring students together. I would love to be part of that environment, contribute my skills, learn from the team, and gain experience by working behind the scenes to create exciting events.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -263,10 +273,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Design and Content",
     "domainPref2": "Finance And Outreach",
     "fitReason": "I think I would be a good fit for the Design & Content department because I genuinely love and enjoy creative work. I like painting and experimenting with different ideas, and I enjoy creating posters and designs that are visually appealing and engaging. I also have experience using Canva and like paying attention to details such as layouts, fonts and overall presentation.\n\nFor Finance & Outreach, I am interested in learning how coordination and outreach work in a club. I may not have much experience in this area yet, but I am willing to learn, take responsibility for my tasks and work with the team. I see it as an opportunity to develop my communication and coordination skills through practical experience.",
-    "clubMotivation": "What excites me about joining Swarajya - MLA Club is the energy and creativity behind the events it organises. Being one of the prominent cultural clubs in our college, its events, especially the Ganpati celebrations, always stands out to me. I find Marathi culture and traditions really fascinating, and I would love to experience and understand them more closely while being a part of the team that brings these celebrations to life. I\u2019m also excited about contributing creatively and getting hands-on experience in organising and presenting such events.",
-    "status": "scheduled",
+    "clubMotivation": "What excites me about joining Swarajya - MLA Club is the energy and creativity behind the events it organises. Being one of the prominent cultural clubs in our college, its events, especially the Ganpati celebrations, always stands out to me. I find Marathi culture and traditions really fascinating, and I would love to experience and understand them more closely while being a part of the team that brings these celebrations to life. I’m also excited about contributing creatively and getting hands-on experience in organising and presenting such events.",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:22:55.163Z"
   },
   {
     "id": "panel-1-15",
@@ -309,9 +320,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "I can help in making websites or also design posters or help make decorations for various events.",
     "clubMotivation": "I am from maharashtra and I attended the ganpati events and they were really fun, I would also like to be a part of such and contribute.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:18:07.915Z"
   },
   {
     "id": "panel-1-18",
@@ -427,8 +439,8 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "3:00 - 3:30 PM",
     "domainPref1": "Technical",
     "domainPref2": "Design and Content",
-    "fitReason": "# GitHub Link : https://github.com/athjos\n# https://horizon-dark-upi.vercel.app/\n# https://trusted-circle-co-sign-mvp--athjos.replit.app/?replit_sid=99061448-abf5-416a-b5f7-a3d904094de3\nFigma Links :\n1) https://www.figma.com/design/S7hZ4P9Z4bx3trynaX7lNa/Task1?m=auto&t=8GfeyfZxJXFPf503-6\n2) https://www.figma.com/design/0lBqIbEyEyO8lI61C4KtZp/Task2?m=auto&t=8GfeyfZxJXFPf503-6\n3) https://www.figma.com/design/dkvkuWrHbTLNHEmU99tNzW/Mission-Brief?m=auto&t=8GfeyfZxJXFPf503-6\n4) https://www.figma.com/design/4Sb4AU8gj9RU04LcPoBcrQ/Mission-Card?m=auto&t=8GfeyfZxJXFPf503-6\n5) https://www.figma.com/design/52M0ehhnnVfMU4PugLcayV/Mission-Complete?m=auto&t=8GfeyfZxJXFPf503-6\n\nI think I can contribute to both the Technical and Design departments because I already have some experience with the kind of work these departments would need.\n\nFor Technical, I have worked on building a website as part of a hackathon, where I got experience with the practical side of turning an idea into a working web project (MVP). I had also learnt HTML and JavaScript during COVID, mainly out of curiosity and for game development. Right now, I am learning Python and trying to build my programming skills further. So I would be comfortable helping with the club\u2019s website, making updates, fixing small issues and learning whatever else is needed along the way.\n\nFor Design, I have been using Figma and Canva for some time and genuinely enjoy designing. I have designed recruitment posters for clubs such as IEEE RAS and IEEE CompSoc, and I have also helped my mom make posters for her tuition classes. I even helped my sister with her marriage invitation card and the patrika, which was actually one of the more personal designs I have worked on.\n\nI would especially like to use these skills for Swarajya because I don't want to just work on random college designs. I would love to learn how to visually represent our Marathi culture in a way that feels modern but still retains its own identity.",
-    "clubMotivation": "What excites me the most about Swarajya is that it gives me a chance to be more involved with a culture that has always been a part of my life.\nI\u2019m Marathi, and Marathi culture has always been a very huge part of my family and home. Since my family has lived in Gujarat for two generations, though, I\u2019ve never really had the chance to experience the OG local culture of Maharashtra first-hand. I\u2019d love to explore that side more - the festivals, music, literature, traditions, food and all the things that make Marathi culture what it is. I think it would be pretty special to find that feeling of \u201c\u0906\u092a\u0932\u0902\u201d here in VIT Chennai.\nAt the same time, I want to be someone who contributes to the club, not just someone who attends its events. I\u2019d love to use my experience in coding, websites and design to help Swarajya with its technical work, posters and event creatives, while also bringing my own ideas to the club.\nI see Swarajya as a place where I can learn more about my roots, meet people who share them, and contribute something of my own along the way. I would want to see the Swarajya club as a home away from home, and all its fellow members as my family with whom I can comfortably speak in my mother tongue.\nLast but not the least, I absolutely love the name \u201cSwarajya\u201d itself. The word carries so much history for us - the idea of having our own land, our own identity and the courage to build something of our own, something so strongly associated with Chhatrapati Shivaji Maharaj. I think it is a really meaningful name for a Marathi cultural club, because it connects our present college community to the people and ideas that shaped our culture.",
+    "fitReason": "# GitHub Link : https://github.com/athjos\n# https://horizon-dark-upi.vercel.app/\n# https://trusted-circle-co-sign-mvp--athjos.replit.app/?replit_sid=99061448-abf5-416a-b5f7-a3d904094de3\nFigma Links :\n1) https://www.figma.com/design/S7hZ4P9Z4bx3trynaX7lNa/Task1?m=auto&t=8GfeyfZxJXFPf503-6\n2) https://www.figma.com/design/0lBqIbEyEyO8lI61C4KtZp/Task2?m=auto&t=8GfeyfZxJXFPf503-6\n3) https://www.figma.com/design/dkvkuWrHbTLNHEmU99tNzW/Mission-Brief?m=auto&t=8GfeyfZxJXFPf503-6\n4) https://www.figma.com/design/4Sb4AU8gj9RU04LcPoBcrQ/Mission-Card?m=auto&t=8GfeyfZxJXFPf503-6\n5) https://www.figma.com/design/52M0ehhnnVfMU4PugLcayV/Mission-Complete?m=auto&t=8GfeyfZxJXFPf503-6\n\nI think I can contribute to both the Technical and Design departments because I already have some experience with the kind of work these departments would need.\n\nFor Technical, I have worked on building a website as part of a hackathon, where I got experience with the practical side of turning an idea into a working web project (MVP). I had also learnt HTML and JavaScript during COVID, mainly out of curiosity and for game development. Right now, I am learning Python and trying to build my programming skills further. So I would be comfortable helping with the club’s website, making updates, fixing small issues and learning whatever else is needed along the way.\n\nFor Design, I have been using Figma and Canva for some time and genuinely enjoy designing. I have designed recruitment posters for clubs such as IEEE RAS and IEEE CompSoc, and I have also helped my mom make posters for her tuition classes. I even helped my sister with her marriage invitation card and the patrika, which was actually one of the more personal designs I have worked on.\n\nI would especially like to use these skills for Swarajya because I don't want to just work on random college designs. I would love to learn how to visually represent our Marathi culture in a way that feels modern but still retains its own identity.",
+    "clubMotivation": "What excites me the most about Swarajya is that it gives me a chance to be more involved with a culture that has always been a part of my life.\nI’m Marathi, and Marathi culture has always been a very huge part of my family and home. Since my family has lived in Gujarat for two generations, though, I’ve never really had the chance to experience the OG local culture of Maharashtra first-hand. I’d love to explore that side more - the festivals, music, literature, traditions, food and all the things that make Marathi culture what it is. I think it would be pretty special to find that feeling of “आपलं” here in VIT Chennai.\nAt the same time, I want to be someone who contributes to the club, not just someone who attends its events. I’d love to use my experience in coding, websites and design to help Swarajya with its technical work, posters and event creatives, while also bringing my own ideas to the club.\nI see Swarajya as a place where I can learn more about my roots, meet people who share them, and contribute something of my own along the way. I would want to see the Swarajya club as a home away from home, and all its fellow members as my family with whom I can comfortably speak in my mother tongue.\nLast but not the least, I absolutely love the name “Swarajya” itself. The word carries so much history for us - the idea of having our own land, our own identity and the courage to build something of our own, something so strongly associated with Chhatrapati Shivaji Maharaj. I think it is a really meaningful name for a Marathi cultural club, because it connects our present college community to the people and ideas that shaped our culture.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -444,9 +456,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I have skills in multiple domain.....such as instrumental and reel making",
     "clubMotivation": "The events of this clubs are always a banger",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:17:34.459Z"
   },
   {
     "id": "panel-2-27",
@@ -457,11 +470,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "10:30 - 11:00 AM",
     "domainPref1": "Cultural",
     "domainPref2": "Operations",
-    "fitReason": "I feel I would be a good fit for both Cultural and Operations because I enjoy performing as well as being involved in the execution of events. I can do small skits, sing Marathi songs, and being Maharashtrian, I am familiar with Marathi traditions and cultural performances.\n\nI also like taking responsibility and handling things during events, which is why I am interested in Operations. I can adapt to situations, coordinate with people, and help make sure things are carried out smoothly. I\u2019m enthusiastic about learning new things and contributing wherever I can.",
+    "fitReason": "I feel I would be a good fit for both Cultural and Operations because I enjoy performing as well as being involved in the execution of events. I can do small skits, sing Marathi songs, and being Maharashtrian, I am familiar with Marathi traditions and cultural performances.\n\nI also like taking responsibility and handling things during events, which is why I am interested in Operations. I can adapt to situations, coordinate with people, and help make sure things are carried out smoothly. I’m enthusiastic about learning new things and contributing wherever I can.",
     "clubMotivation": "As I am a fresher, when i first heard about your club i was very excited to see what events do this club do. Then after coming to the aagman event of Ganpati, I realised how good this club is. This is what fascinated me about joining the swarajya club.",
-    "status": "scheduled",
+    "status": "on-hold",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:09:46.673Z"
   },
   {
     "id": "panel-2-28",
@@ -474,9 +488,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I dance well",
     "clubMotivation": "Feels like home away from home",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:04:25.296Z"
   },
   {
     "id": "panel-2-29",
@@ -489,9 +504,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I am interested in joining department like culture beacause I like to participate in culture activities in which I will perform with full energy and enjoyment beacause I want to get involved in some other non academic activities by not only focusing on academics.\nI chose operations as second preference because I have done some volunteering roles in school during gathering, sports day events etc. I have not done it regularly but still I have some potential of managing crowd.",
     "clubMotivation": "Because it represents my culture. And also    \nit will help to interact with different people and get to know about different activities.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:04:58.186Z"
   },
   {
     "id": "panel-2-30",
@@ -504,9 +520,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I am a professional classical dancer and I also know bollywood, hence the first preference.  I work really well with teams and want to help with management of event, so the second preference.",
     "clubMotivation": "Their Ganesh Utsav was amazing",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:10:02.233Z"
   },
   {
     "id": "panel-2-31",
@@ -519,9 +536,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I am happy to participate in everypart of the event including dance and skit.",
     "clubMotivation": "The events are very grand and attracts me towards this club also I am from up and want to explore the maharashtra culture.",
-    "status": "scheduled",
+    "status": "on-hold",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:20:44.241Z"
   },
   {
     "id": "panel-2-32",
@@ -534,9 +552,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I have been part of a community where we used to organize multi day cultural events. There I was part of the operations so I have experience dealing with management and other certain things involved. Also, as we conducted cultural festivals or hosted them in presence of large crowds, I have hands on experience on the various activities that can be put in front of the audience to keep them engaged and involved throughout the course of the event. Recently, I was part of the Anant utsav held at MG auditorium on 19th september. I was part of the musical band and it was really very engaging and interesting to be part of the events that are organised by Swarajya. I am really looking forward to being part of this club, provide my experience, while at the same time have an open mind to learn from the people around me.",
     "clubMotivation": "The Swarajya Club really fascinates me because it is very welcoming to everyone. I was recently part of the BGM event of Anant at MG auditorium. I had given auditions for various activities. I did get selected into the Musical Band but couldnt make it through the selection for dhol tasha. The members of the club encouraged me to give my 100 percent effort into the activity that i got selected into and not to worry as there will be many more chances to try other activities as well. This really fascinated me. Also the events that are conducted by the club are very interesting and fascinating. I was not part of the Gudi Padwa festival but seeing the glimpses of it on the social media webpage made me fascinated. Also, the Ganesh Utsav festival that is conducted is really very blissful and spiritually enlightening.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:38:02.295Z"
   },
   {
     "id": "panel-2-33",
@@ -549,9 +568,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "Musically aligned, Experience with Tabla for 5 years, Played in Dhol Pathak for Ganesh chaturthi \nGood with management and People, (Adhyaksh of Society Ganesh Mandal so have experience in Leading and managing)",
     "clubMotivation": "Representing the Culture we belong to",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:41:50.178Z"
   },
   {
     "id": "panel-2-34",
@@ -562,11 +582,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "11:15 - 11:45 AM",
     "domainPref1": "Cultural",
     "domainPref2": "Operations",
-    "fitReason": "I think I\u2019d be a good fit for both Culturals and Operations because I enjoy being involved in events and working with people. During Ganesh Chaturthi, I participated in the  Dhol-Tasha , where I played the dhol, which gave me a chance to experience teamwork and coordination firsthand. I\u2019m enthusiastic about cultural activities, willing to take up responsibilities and always open to learning and contributing wherever needed.",
-    "clubMotivation": "What excites me most about joining Swarajya is being part of a community that celebrates Marathi language and culture. The idea of celebrating Marathi festivals here in Chennai genuinely fascinates me, Having participated in Dhol-Tasha during Ganesh Chaturthi, I\u2019d love to be involved in more such celebrations, meet new people and contribute to making these events memorable.",
-    "status": "scheduled",
+    "fitReason": "I think I’d be a good fit for both Culturals and Operations because I enjoy being involved in events and working with people. During Ganesh Chaturthi, I participated in the  Dhol-Tasha , where I played the dhol, which gave me a chance to experience teamwork and coordination firsthand. I’m enthusiastic about cultural activities, willing to take up responsibilities and always open to learning and contributing wherever needed.",
+    "clubMotivation": "What excites me most about joining Swarajya is being part of a community that celebrates Marathi language and culture. The idea of celebrating Marathi festivals here in Chennai genuinely fascinates me, Having participated in Dhol-Tasha during Ganesh Chaturthi, I’d love to be involved in more such celebrations, meet new people and contribute to making these events memorable.",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:47:52.717Z"
   },
   {
     "id": "panel-2-35",
@@ -579,9 +600,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I have experience in event management and host publics events as well so I know how to handle crowd and chaos",
     "clubMotivation": "I have been to events hosted by the swaraj club (most exciting ganesha event) everytime everyday I attend it it feels like I want to part of the team ... That's what drive me to join this club",
-    "status": "scheduled",
+    "status": "on-hold",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:24:31.384Z"
   },
   {
     "id": "panel-2-36",
@@ -594,9 +616,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "Participated in Ganesh utsav 2026",
     "clubMotivation": "Meeting new people",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:54:56.304Z"
   },
   {
     "id": "panel-2-37",
@@ -653,10 +676,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Cultural",
     "domainPref2": "Operations",
     "fitReason": "I feel I fit for the cultural department as I am fond of ' Powada' , a very special marathi folk art. It requires a good art of poetry singing and resonant voice. I have performed the Powada several times in my school events. I have hosted the annual function in my school 'Sainik School Chandrapur' , therefore I also have good skills for anchoring . I am also fond of marathi literature, I have read various excellent poems of marathi poets. I have also read marathi literature such as 'Chhava', 'Agnirekha', 'Kosala', 'Shyamchi aai', etc.  I like to be part of cultural department of Swarajya club and showcase the beauty of maharashtrian tradition.",
-    "clubMotivation": "As I belong to Maharashtra I always honor the marathi culture and festivals. I found Swarajya  as the very disciplined, well organised club which attracts the odience by their good work. 'The 2K26 Ganeshostav ' organised by Swarajya club fascinated me to be a part of this club, which actually works according to it's motto ' \u0938\u0947\u0935\u0947\u091a\u0947 \u0920\u093e\u092f\u0940 \u0924\u0924\u094d\u092a\u0930 '. I liked it to be the volunteer during Ganeshostav and working along with Swarajya members with unity.",
-    "status": "scheduled",
+    "clubMotivation": "As I belong to Maharashtra I always honor the marathi culture and festivals. I found Swarajya  as the very disciplined, well organised club which attracts the odience by their good work. 'The 2K26 Ganeshostav ' organised by Swarajya club fascinated me to be a part of this club, which actually works according to it's motto ' सेवेचे ठायी तत्पर '. I liked it to be the volunteer during Ganeshostav and working along with Swarajya members with unity.",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:06:45.576Z"
   },
   {
     "id": "panel-2-41",
@@ -699,9 +723,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Operations",
     "fitReason": "I enjoy taking part in the cultural events and learning new cultures and I also join Lezim for the Ganesh Chaturthi",
     "clubMotivation": "First of all I am from Maharashtra and also the festivals over there are one of my favourites",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:01:42.158Z"
   },
   {
     "id": "panel-2-44",
@@ -713,7 +738,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Cultural",
     "domainPref2": "Operations",
     "fitReason": "I believe I would be a good fit for the selected departments because I have experience in leadership and event management, along with a genuine interest in cultural activities. Having served as the Head Girl in school, I had the opportunity to organise and manage various events, coordinate with people, take responsibility, and ensure things ran smoothly. \n\nI am particularly interested in the Cultural Department because I enjoy being involved in cultural activities and recently got the opportunity to participate in Dhol pathak during VIT's Ganesh Chaturthi celebrations. It made me want to explore and be more actively involved in Maharashtra's cultural traditions.\n I enjoy creative work as well and would love to contribute ideas wherever needed.",
-    "clubMotivation": "What excites me most about joining Swarajya \u2013 MLA Club is the opportunity to stay connected to Maharashtra's culture and traditions while being away from home. I enjoy being part of cultural celebrations, and participating in Dhol during this year's Ganesh Chaturthi celebrations at VIT made me want to get more involved with the club.\n\nI also look forward to meeting people with similar interests, learning new things, and being part of the process of organising events rather than just attending them",
+    "clubMotivation": "What excites me most about joining Swarajya – MLA Club is the opportunity to stay connected to Maharashtra's culture and traditions while being away from home. I enjoy being part of cultural celebrations, and participating in Dhol during this year's Ganesh Chaturthi celebrations at VIT made me want to get more involved with the club.\n\nI also look forward to meeting people with similar interests, learning new things, and being part of the process of organising events rather than just attending them",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -728,7 +753,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Cultural",
     "fitReason": "I believe I would be a good fit for the Marathi Literature Club because I have a genuine interest in Marathi language, literature, and creative expression. I enjoy exploring different forms of writing and appreciate how literature connects people with culture, emotions, and ideas. I am also a responsible and enthusiastic team member who is willing to contribute to discussions, literary activities, content creation, and events. I would love to learn from others, share my ideas, and actively contribute to making the club engaging and welcoming for everyone.",
-    "clubMotivation": "I\u2019m excited to join the Marathi Literature Society because I love exploring Marathi language, literature, culture, and its rich traditions. I look forward to sharing my ideas, learning from others, and being part of creative activities that celebrate Marathi.",
+    "clubMotivation": "I’m excited to join the Marathi Literature Society because I love exploring Marathi language, literature, culture, and its rich traditions. I look forward to sharing my ideas, learning from others, and being part of creative activities that celebrate Marathi.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -773,10 +798,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Cultural",
     "fitReason": "Interested in management and related stuff",
-    "clubMotivation": "Being a marathi \ud83d\udea9",
-    "status": "scheduled",
+    "clubMotivation": "Being a marathi 🚩",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:24:01.580Z"
   },
   {
     "id": "panel-2-49",
@@ -818,7 +844,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Finance And Outreach",
     "fitReason": "I can take quick decisions wherever needed, and  i can manage a team or a group of people under me.",
-    "clubMotivation": "The coolest non technical club of vitc \ud83d\ude0b",
+    "clubMotivation": "The coolest non technical club of vitc 😋",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -863,7 +889,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Cultural",
     "fitReason": "I have organised and managed events including during the bgm this year.",
-    "clubMotivation": "\u092e\u0930\u093e\u0920\u0940 \u0932\u094b\u0915\u093e\u0902\u0928\u093e \u092d\u0947\u091f\u093e\u092f\u091a\u0940 \u0906\u0938",
+    "clubMotivation": "मराठी लोकांना भेटायची आस",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -878,7 +904,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Finance And Outreach",
     "fitReason": "I have managament skills which I developed in school being part of school council and ya I enjoy management",
-    "clubMotivation": "Ganesh utsav \ud83d\ude43",
+    "clubMotivation": "Ganesh utsav 🙃",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -893,7 +919,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Cultural",
     "domainPref2": "Finance And Outreach",
     "fitReason": "(1) Cultural- I've grown up in Maharashtra all my life and the culture of every festival, community and ocassions have been such a formative memory of my life. There's nothing more than I'd want to carry a piece of home through cultural department. I can also help writing scripts! And help in organizing, but I'd like to step out of my comfort zone and enjoy the culture here together with this club.\n\n(2) Finance and Outreach- I don't have professional experience of any sort but I've helped my friends with opportunities and I've reached out to professors for research and bridged even professors to students who align,  I believe I am straightforward and I'm not afraid to learn from scratch. I'll learn the necessary traits with time, and I know I can scale my bridging and networking skills on a professional level. Always open to constructive criticism, but even more to staying firm under pressure.",
-    "clubMotivation": "Seeing the club perform, organize and execute so beautifully. Every cultural aspect of Maharashtra has deeply imprinted on me growing up. And i see that everytime I see events or festivities (especially ganesh chaturthi \ud83e\udd79) conducted by Swarajya. It's so beautiful and I'd love to be a part of whatever shape this club takes over time.",
+    "clubMotivation": "Seeing the club perform, organize and execute so beautifully. Every cultural aspect of Maharashtra has deeply imprinted on me growing up. And i see that everytime I see events or festivities (especially ganesh chaturthi 🥹) conducted by Swarajya. It's so beautiful and I'd love to be a part of whatever shape this club takes over time.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -909,9 +935,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Technical",
     "fitReason": "I am currently a FFCS member and was a part of management and marketing committee in all our Ganpati events.",
     "clubMotivation": "I am also from Maharashtra and seeing the club making our festivals possible here in Chennai excites me and makes me want to be a part in helping to organize the events.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:09:25.481Z"
   },
   {
     "id": "panel-3-58",
@@ -923,10 +950,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Technical",
     "fitReason": "I have prior experience in event management, having volunteered with the Stall Committee at TechnoVIT and been part of the management team for the recent Agaman and Anantham events under BGM. These experiences helped me develop strong teamwork, coordination, communication, which I believe will help me contribute to the department.",
-    "clubMotivation": "I\u2019m excited to join because many of the cultural events and celebrations I\u2019ve experienced at home are also organised here by our club. I\u2019m excited to explore new experiences while being part of an active and engaging Club.",
-    "status": "scheduled",
+    "clubMotivation": "I’m excited to join because many of the cultural events and celebrations I’ve experienced at home are also organised here by our club. I’m excited to explore new experiences while being part of an active and engaging Club.",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:40:22.705Z"
   },
   {
     "id": "panel-3-59",
@@ -939,9 +967,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "I honestly have been waiting since really long for the recruitments to open for this club and the department of operations is my preference cause I really wanna gain experience in the event management part and help handle all the chaos plus have fun :). Design and content will also work for me but I'd really prefer operations.",
     "clubMotivation": "As I mentioned I've been eager to join a club like this especially swarajya cause one - I come from a maharashtrian background but I've never lived in maharashtra so I'm quite excited to experience a similar environment and secondly I was really fascinated by the events organized by this club during the ganesh Utsav and even other events on social media. Would love to join the fam and create good memories with lotsa experience!",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:19:46.353Z"
   },
   {
     "id": "panel-3-60",
@@ -954,9 +983,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "First of all, I am a Marathi Maharashtrian. Secondly I really want to be a part of the group of people who are from a place where i am from and who speak the same language as me and i also love being a part of and organising events.",
     "clubMotivation": "I would say that working with marathi people and Maharashtrians excites me the most about this club and thats why i wanna be a part of it.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:49:07.586Z"
   },
   {
     "id": "panel-3-61",
@@ -969,9 +999,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "I am proficient in photoshop and art softwares and I have also participated in this year's ganesh utsav operations also",
     "clubMotivation": "The culture",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:54:26.974Z"
   },
   {
     "id": "panel-3-62",
@@ -984,9 +1015,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "I have worked for swarajya before in operations in ganesh chaturthi and visarjan.",
     "clubMotivation": "I want to showcase our beautiful Marathi culture to the world.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T06:05:26.908Z"
   },
   {
     "id": "panel-3-63",
@@ -999,9 +1031,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Cultural",
     "fitReason": "I have been a part of the organising committee for multiple events during school and believe in the fact the you need the cooperation and collaboration of people to achieve anything tangible and worth remembering. I have taken multiple positions of responsibility during my junior college as well as school, and managed them in a composed, patient and obedient manner. I would also like to be a part of the cultural because I have a fascination for the arts since childhood and contributed for the same via painting, sketching, dancing and singing.",
     "clubMotivation": "Being a part of my community and representing it here in VIT, and also being a part of Swarajya feels a bit like home.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T06:14:55.776Z"
   },
   {
     "id": "panel-3-64",
@@ -1013,7 +1046,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Cultural",
     "fitReason": "I think I would be a good fit for the Cultural and Operations departments because I enjoy organizing events, interacting with people, and working in a team. Through my school's IT and cultural committees, I've had the opportunity to coordinate with people, take responsibility, and manage the overall flow of cultural events to make sure everything runs smoothly, like hosting other schools and making sure all the performances are done on time.\n\nFor the Cultural department, I'd love to contribute creative ideas and help organize engaging events. In Operations, I'd be happy to help with logistics, coordination, and handling things behind the scenes. I'm always open to learning, taking on new challenges, and stepping out of my comfort zone.",
-    "clubMotivation": "What excites me about joining Swarajya is that I\u2019d get to learn more about Marathi culture and traditions. I\u2019ve always found different cultures interesting, especially their festivals, food, music, and the way people celebrate them. I don\u2019t know a lot about Marathi culture right now, so I\u2019d genuinely like to learn more about it, meet new people, and be a part of the events and activities the club organizes. I think it would be a fun way to learn something new and be involved in the college community.",
+    "clubMotivation": "What excites me about joining Swarajya is that I’d get to learn more about Marathi culture and traditions. I’ve always found different cultures interesting, especially their festivals, food, music, and the way people celebrate them. I don’t know a lot about Marathi culture right now, so I’d genuinely like to learn more about it, meet new people, and be a part of the events and activities the club organizes. I think it would be a fun way to learn something new and be involved in the college community.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1042,7 +1075,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "11:15 - 11:45 AM",
     "domainPref1": "Operations",
     "domainPref2": "Finance And Outreach",
-    "fitReason": "I feel I would be a good fit for Operations, Finance, and Outreach because I enjoy working with people, taking responsibility, and making sure things are organised and done properly. I\u2019m someone who likes planning and coordinating tasks, which is why Operations interests me.\n\nI\u2019m also comfortable working with numbers and paying attention to small details, so I\u2019m interested in exploring the Finance side as well. At the same time, I enjoy communicating with people and building connections, which makes Outreach another department I would be happy to contribute to.\n\nI may still be learning and gaining experience, but I\u2019m willing to put in the effort, learn quickly, and take up responsibilities wherever I can contribute.",
+    "fitReason": "I feel I would be a good fit for Operations, Finance, and Outreach because I enjoy working with people, taking responsibility, and making sure things are organised and done properly. I’m someone who likes planning and coordinating tasks, which is why Operations interests me.\n\nI’m also comfortable working with numbers and paying attention to small details, so I’m interested in exploring the Finance side as well. At the same time, I enjoy communicating with people and building connections, which makes Outreach another department I would be happy to contribute to.\n\nI may still be learning and gaining experience, but I’m willing to put in the effort, learn quickly, and take up responsibilities wherever I can contribute.",
     "clubMotivation": "What excites me about joining Swarajya is that it is not just about Marathi literature, but also about celebrating the culture, traditions, and spirit of Maharashtra through different events and activities. I would love to be a part of those events, experience the culture in a more engaging way, and meet people with similar interests. I also see it as a good opportunity to learn, contribute, and be involved in something beyond academics.",
     "status": "scheduled",
     "notes": "",
@@ -1073,7 +1106,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Operations",
     "domainPref2": "Finance And Outreach",
     "fitReason": "I have managed small events in locality and school and in mandal level. I am comfortable taking responsibility , working with different people and ensuring that work is completed smoothly.",
-    "clubMotivation": "It feels like home and the way Bappa\u2019s event happened, everything was top notch.The atmosphere,people and event it was best.",
+    "clubMotivation": "It feels like home and the way Bappa’s event happened, everything was top notch.The atmosphere,people and event it was best.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1252,8 +1285,8 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "3:00 - 3:30 PM",
     "domainPref1": "Operations",
     "domainPref2": "Technical",
-    "fitReason": "I think I\u2019d be a good fit for Operations because I like keeping things organized and making sure work actually gets done. If something needs to be handled, I\u2019m usually comfortable figuring out what\u2019s pending, dividing the work if needed, and following up until it\u2019s completed. I also enjoy working with people and figuring things out as a team.\n\nFor Technical, I have a basic knowledge of Python and I\u2019ve been exploring programming, data science and AI/ML. I\u2019m also part of GDG\u2019s Data Science department, where I recently worked on a machine learning problem for a Kaggle competition. I\u2019m still learning and definitely don\u2019t consider myself an expert, but I\u2019m interested in getting more hands-on experience and improving my technical skills.\n\nOverall, I think my willingness to learn, take responsibility and work well with a team would make me a good fit for both departments.",
-    "clubMotivation": "What excites me about joining Swarajya is being part of a community where I can stay connected to my Marathi roots and culture while also meeting people from different backgrounds. I\u2019m from Maharastra, so Marathi culture has always been a part of my life, and I really enjoy things like Ganesh Utsav, the celebrations, and even the lunch after visarjan. Being around Marathi people gives me a sense of familiarity and feels a little like home, but I also really enjoy meeting new people, making friends, and learning about different cultures and experiences. I think Swarajya would give me a chance to do both while being part of something I genuinely connect with.",
+    "fitReason": "I think I’d be a good fit for Operations because I like keeping things organized and making sure work actually gets done. If something needs to be handled, I’m usually comfortable figuring out what’s pending, dividing the work if needed, and following up until it’s completed. I also enjoy working with people and figuring things out as a team.\n\nFor Technical, I have a basic knowledge of Python and I’ve been exploring programming, data science and AI/ML. I’m also part of GDG’s Data Science department, where I recently worked on a machine learning problem for a Kaggle competition. I’m still learning and definitely don’t consider myself an expert, but I’m interested in getting more hands-on experience and improving my technical skills.\n\nOverall, I think my willingness to learn, take responsibility and work well with a team would make me a good fit for both departments.",
+    "clubMotivation": "What excites me about joining Swarajya is being part of a community where I can stay connected to my Marathi roots and culture while also meeting people from different backgrounds. I’m from Maharastra, so Marathi culture has always been a part of my life, and I really enjoy things like Ganesh Utsav, the celebrations, and even the lunch after visarjan. Being around Marathi people gives me a sense of familiarity and feels a little like home, but I also really enjoy meeting new people, making friends, and learning about different cultures and experiences. I think Swarajya would give me a chance to do both while being part of something I genuinely connect with.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1298,7 +1331,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Social Media",
     "domainPref2": "Operations",
     "fitReason": "I have participated in few reels of swaraj and worked with OM dada. I think it is genuine fun and I would love to be a part of swaraj through this contribution. I am also great at operation, as back home I was also part of a mitra mandal in Pune.",
-    "clubMotivation": "I am from Pune, Maharashtra. Swarajya gives me a sense of belonging far from home. This club can be summarised by \"\u0906\u092a\u0932\u0940 \u092e\u093e\u0923\u0938\u0902, \u0906\u092a\u0932\u0940 \u092d\u093e\u0937\u093e, \u0906\u092a\u0932\u093e \u0915\u091f\u094d\u091f\u093e\".",
+    "clubMotivation": "I am from Pune, Maharashtra. Swarajya gives me a sense of belonging far from home. This club can be summarised by \"आपली माणसं, आपली भाषा, आपला कट्टा\".",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1312,7 +1345,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "3:45 - 4:15 PM",
     "domainPref1": "Social Media",
     "domainPref2": "Operations",
-    "fitReason": "Honestly, I think my personality just aligns perfectly with what both departments need. I'm always online and know how to hype people up, which makes social media a natural first choice for me. But I also genuinely enjoy organizing things, which is why I want to help out with operations too. I\u2019m hard-working, easy to work with, and really excited to help the club pull off its next big events.I will do my absolute best to give this club the hype and audience engagement it truly deserves! While I haven't created a ton of content yet, I\u2019ve spent a lot of time analyzing trends and understand the exact patterns needed to attract viewers and make our engagement go crazy.",
+    "fitReason": "Honestly, I think my personality just aligns perfectly with what both departments need. I'm always online and know how to hype people up, which makes social media a natural first choice for me. But I also genuinely enjoy organizing things, which is why I want to help out with operations too. I’m hard-working, easy to work with, and really excited to help the club pull off its next big events.I will do my absolute best to give this club the hype and audience engagement it truly deserves! While I haven't created a ton of content yet, I’ve spent a lot of time analyzing trends and understand the exact patterns needed to attract viewers and make our engagement go crazy.",
     "clubMotivation": "I truly love the vibe of this club; no other college club even comes close. Plus, the quality of their events is absolutely amazing!!!",
     "status": "scheduled",
     "notes": "",
@@ -1327,11 +1360,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "10:30 - 11:00 AM",
     "domainPref1": "Cultural",
     "domainPref2": "Social Media",
-    "fitReason": "I\u2019m a strong fit for Cultural and Social Media because I\u2019m passionate about performing and creating. I have experience in Western dance, along with training in Bharatanatyam and Mohiniyattam. I\u2019m also a singer and violinist, and I enjoy coming up with creative ideas and engaging content.",
-    "clubMotivation": "Swarajya - MLA Club interests me because I\u2019m curious about leadership, society, and different perspectives. I\u2019d love to contribute through hosting, social media, and event coordination while learning and bringing fresh ideas to the club.",
-    "status": "scheduled",
+    "fitReason": "I’m a strong fit for Cultural and Social Media because I’m passionate about performing and creating. I have experience in Western dance, along with training in Bharatanatyam and Mohiniyattam. I’m also a singer and violinist, and I enjoy coming up with creative ideas and engaging content.",
+    "clubMotivation": "Swarajya - MLA Club interests me because I’m curious about leadership, society, and different perspectives. I’d love to contribute through hosting, social media, and event coordination while learning and bringing fresh ideas to the club.",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:04:13.529Z"
   },
   {
     "id": "panel-4-86",
@@ -1344,9 +1378,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Social Media",
     "fitReason": "I sing , I play flute ,I play keys , I act. Really love cultural department, can't get enough of it\n.",
     "clubMotivation": "Swarajya has a good reputation going on in Vit and I'm from Uttarakhand so I want to explore more of Maharashtra culture.",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:04:17.312Z"
   },
   {
     "id": "panel-4-87",
@@ -1359,9 +1394,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Social Media",
     "fitReason": "for cultural i can do the work assigned to me and i know about the maharashtra culture .i already had a cultural dance performance for swarajya on ganesh chahturthi , so i can work and coordinate well with everyone . for social media , i am ready to make as many reels as given to me without camera fear , would like to learn more about editing the photos to upload on social media .",
     "clubMotivation": "its the best cultural club here at vit and since i have lived in maharashtra for 10 yrs i know about the culture and marathi language there so want to make new friends and contacts and work here to learn something new",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "score": 8.5,
+    "updatedAt": "2026-10-03T05:56:05.062Z"
   },
   {
     "id": "panel-4-88",
@@ -1373,10 +1410,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Cultural",
     "domainPref2": "Design and Content",
     "fitReason": "I like singing and I have done it before in BGM cultural program. I am interested to be a part of swarajya club.",
-    "clubMotivation": "The Swarajya Maharashtra Literary Club is the opportunity to explore Maharashtra\u2019s rich history, literature, culture, and ideas. I\u2019m also excited to meet people who share similar interests, learn from them, and contribute my own ideas through discussions and creative activities.",
-    "status": "scheduled",
+    "clubMotivation": "The Swarajya Maharashtra Literary Club is the opportunity to explore Maharashtra’s rich history, literature, culture, and ideas. I’m also excited to meet people who share similar interests, learn from them, and contribute my own ideas through discussions and creative activities.",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "score": 7.5,
+    "updatedAt": "2026-10-03T05:56:18.927Z"
   },
   {
     "id": "panel-4-89",
@@ -1389,9 +1428,11 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Finance And Outreach",
     "fitReason": "As a Maharashtrian,I want to join this club from the Club expo .Then, in BGM I took part in cultural.Also, I really want to restart learning keyboard instrument.",
     "clubMotivation": "Surrounding myself with my people, far from home.",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "score": 8,
+    "updatedAt": "2026-10-03T05:56:27.129Z"
   },
   {
     "id": "panel-4-90",
@@ -1402,11 +1443,12 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "11:15 - 11:45 AM",
     "domainPref1": "Cultural",
     "domainPref2": "Design and Content",
-    "fitReason": "\u2022 Cultural: I have a strong passion for celebrating Maharashtrian traditions and love participating in or organizing cultural events, drama, and festival celebrations.\n\u2022 Design & Content: I enjoy creative visual storytelling, writing, and creating engaging postrs or digital media that bring cultural stories to life",
+    "fitReason": "• Cultural: I have a strong passion for celebrating Maharashtrian traditions and love participating in or organizing cultural events, drama, and festival celebrations.\n• Design & Content: I enjoy creative visual storytelling, writing, and creating engaging postrs or digital media that bring cultural stories to life",
     "clubMotivation": "I am deeply excited to help prserve and celebrate Maharashtrian culture by combining my passion for traditional events with creative digital storytelling",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:56:52.227Z"
   },
   {
     "id": "panel-4-91",
@@ -1419,9 +1461,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Finance And Outreach",
     "fitReason": "I have selected Cultural because it is the best fit for me, given my previous dance experiences. I have performed at an open mic for GLA, and I have also been a part of Swaraj Hip-Hop Dance, where I performed during the Ganesh Visarjan at MJ Auditorium.",
     "clubMotivation": "Swaraj is the club that stands out the most to me and definitely has the most aura among all the clubs. I really admire how well everyone works together as a team, and I genuinely felt a very positive vibe and energy while being around the people in the club. The overall atmosphere, teamwork, and confidence of the members are what make Swaraj feel like the right fit for me.",
-    "status": "scheduled",
+    "status": "absent",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:41:28.412Z"
   },
   {
     "id": "panel-4-92",
@@ -1436,7 +1479,9 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "clubMotivation": "The Dhol Tasha pathak and culture excites me to join the club.",
     "status": "scheduled",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "score": 8,
+    "updatedAt": "2026-10-03T05:55:39.950Z"
   },
   {
     "id": "panel-4-93",
@@ -1509,9 +1554,10 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref2": "Design and Content",
     "fitReason": "I participated in the lezim performance during this ganpati, i wanted to have a good time and make some memories which I did and therefore find myself again appearing for the recruitment process.",
     "clubMotivation": "The cultural richness of the club, the sandals, dhols, tash, jhande and lezim have a special place in my heart :)",
-    "status": "scheduled",
+    "status": "completed",
     "notes": "",
-    "createdAt": "2026-10-03T10:00:00.000Z"
+    "createdAt": "2026-10-03T10:00:00.000Z",
+    "updatedAt": "2026-10-03T05:29:30.902Z"
   },
   {
     "id": "panel-4-98",
@@ -1523,7 +1569,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "domainPref1": "Cultural",
     "domainPref2": "Social Media",
     "fitReason": "I think I would be a good fit for the Cultural department because I really enjoy being part of cultural activities and events. I would love to contribute to events related to Marathi traditions, festivals, music, literature, and other parts of Maharashtrian culture. I also like working with people, sharing ideas, and helping in planning and managing events.\nFor social media, I am interested in learning more about how content is created and managed for a club. I would like to contribute ideas for posts, stories, reels, captions, and event coverage. I may not have a lot of experience in social media management yet, but I am willing to learn, and I think I can come up with creative ideas and contribute well as part of the team.",
-    "clubMotivation": "What excites me about joining Swarajya is that I\u2019ll get a chance to stay connected with Marathi culture even while being away from home and also be part of events that celebrate it on campus. I really like the idea of celebrating Marathi festivals, traditions, music, literature, and other parts of our culture in a fun and creative way.I also want to meet new people, take part in organizing events, and be more involved in college activities. I feel Swarajya would be a really nice place for me to make good memories, improve my confidence and communication, and at the same time contribute to something I genuinely connect with.",
+    "clubMotivation": "What excites me about joining Swarajya is that I’ll get a chance to stay connected with Marathi culture even while being away from home and also be part of events that celebrate it on campus. I really like the idea of celebrating Marathi festivals, traditions, music, literature, and other parts of our culture in a fun and creative way.I also want to meet new people, take part in organizing events, and be more involved in college activities. I feel Swarajya would be a really nice place for me to make good memories, improve my confidence and communication, and at the same time contribute to something I genuinely connect with.",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1582,8 +1628,8 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "12:45 - 1:15 PM",
     "domainPref1": "Social Media",
     "domainPref2": "Finance And Outreach",
-    "fitReason": "I am capable of promoting exciting events on social media. I have handled social media professionally before on both Instagram and Pinterest. I\u2019m also comfortable communicating with people, coordinating tasks, and handling spreadsheets and databases. I have had experience in budgeting before, but it was personal work, not professional.  I am good at managing chaos during crucial moments, and I believe that these skills will make me a good fit for the departments I chose.",
-    "clubMotivation": "What fascinates me about this club is that it gives me a chance to connect with my Marathi culture in a fun, engaging way. Being part of this club will make me feel closer to my home state. I would love to be part of a team that helps bring Marathi culture and celebration to life through events, social media, and other activities. I\u2019m really excited about meeting new people, sharing ideas, learning from others, and contributing to events that create a strong sense of belonging among students. It is also a great way to showcase Marathi heritage and traditions through Fests and Ganesh Utsav",
+    "fitReason": "I am capable of promoting exciting events on social media. I have handled social media professionally before on both Instagram and Pinterest. I’m also comfortable communicating with people, coordinating tasks, and handling spreadsheets and databases. I have had experience in budgeting before, but it was personal work, not professional.  I am good at managing chaos during crucial moments, and I believe that these skills will make me a good fit for the departments I chose.",
+    "clubMotivation": "What fascinates me about this club is that it gives me a chance to connect with my Marathi culture in a fun, engaging way. Being part of this club will make me feel closer to my home state. I would love to be part of a team that helps bring Marathi culture and celebration to life through events, social media, and other activities. I’m really excited about meeting new people, sharing ideas, learning from others, and contributing to events that create a strong sense of belonging among students. It is also a great way to showcase Marathi heritage and traditions through Fests and Ganesh Utsav",
     "status": "scheduled",
     "notes": "",
     "createdAt": "2026-10-03T10:00:00.000Z"
@@ -1627,7 +1673,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "3:00 - 3:30 PM",
     "domainPref1": "Operations",
     "domainPref2": "Cultural",
-    "fitReason": "I feel I would be a good fit for Operations because I recently participated in Swarajya\u2019s Ganesh utsav event and got to see how much coordination and management goes into making an event run smoothly. I really enjoyed being a part of the event and found the behind-the-scenes planning and execution interesting. This experience made me want to explore Operations further and contribute more actively.",
+    "fitReason": "I feel I would be a good fit for Operations because I recently participated in Swarajya’s Ganesh utsav event and got to see how much coordination and management goes into making an event run smoothly. I really enjoyed being a part of the event and found the behind-the-scenes planning and execution interesting. This experience made me want to explore Operations further and contribute more actively.",
     "clubMotivation": "What excites me most about joining Swarajya - MLA Club is the welcoming and friendly people and the activities the club organizes. I really enjoyed being a part of the Ganesh utsav event and felt connected to the community. I would love to stay connected with my culture and people while contributing to more such activities and events.",
     "status": "scheduled",
     "notes": "",
@@ -1672,7 +1718,7 @@ export const INITIAL_CANDIDATES: Candidate[] = [
     "timeSlot": "3:00 - 3:30 PM",
     "domainPref1": "Cultural",
     "domainPref2": "Design and Content",
-    "fitReason": "Love to Dance \ud83d\udd7a\ud83c\udffb",
+    "fitReason": "Love to Dance 🕺🏻",
     "clubMotivation": "The club people",
     "status": "scheduled",
     "notes": "",

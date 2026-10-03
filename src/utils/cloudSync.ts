@@ -1,10 +1,11 @@
 import { Candidate } from '../types';
 
-export const DEFAULT_ROOM_ID = 'swarajya-recruitment-2026';
+export const DEFAULT_ROOM_ID = 'swarajya-recruitment-live-2026';
 export const ROOM_STORAGE_KEY = 'recruitment_cloud_room_id';
 export const LAST_SYNC_KEY = 'recruitment_cloud_last_sync';
 
 const CLOUD_BASE = 'https://mantledb.sh/v2';
+const NTFY_BASE = 'https://ntfy.sh';
 
 export interface CloudPayload {
   room: string;
@@ -13,10 +14,25 @@ export interface CloudPayload {
   candidates: Candidate[];
 }
 
+export interface LiveCandidateEvent {
+  type: 'candidate_update';
+  senderId: string;
+  candidate: Candidate;
+  timestamp: string;
+}
+
 export function getCurrentRoomId(): string {
   try {
     const saved = localStorage.getItem(ROOM_STORAGE_KEY);
-    if (saved && saved.trim()) return saved.trim();
+    if (saved && saved.trim()) {
+      const clean = saved.trim();
+      // Auto-migrate from the throttled room to the new unthrottled live room
+      if (clean === 'swarajya-recruitment-2026') {
+        localStorage.setItem(ROOM_STORAGE_KEY, DEFAULT_ROOM_ID);
+        return DEFAULT_ROOM_ID;
+      }
+      return clean;
+    }
   } catch (e) {
     // ignore
   }
@@ -32,7 +48,99 @@ export function setCurrentRoomId(roomId: string): void {
 }
 
 /**
- * Fetch candidates state from shared cloud room
+ * Instant PubSub: Broadcast a single candidate update to all other devices in real-time (< 200ms)
+ */
+export async function publishLiveCandidateUpdate(
+  candidate: Candidate,
+  senderId: string,
+  roomId: string = getCurrentRoomId()
+): Promise<void> {
+  const cleanTopic = encodeURIComponent(roomId || DEFAULT_ROOM_ID);
+  const payload: LiveCandidateEvent = {
+    type: 'candidate_update',
+    senderId,
+    candidate,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    await fetch(`${NTFY_BASE}/${cleanTopic}`, {
+      method: 'POST',
+      headers: {
+        'Title': 'Candidate Update',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn('[RealtimeSync] Failed to publish live update:', err);
+  }
+}
+
+/**
+ * Instant PubSub: Subscribe to real-time candidate updates from other devices via Server-Sent Events (SSE)
+ */
+export function subscribeLiveCandidateUpdates(
+  roomId: string,
+  onRemoteUpdate: (candidate: Candidate, senderId: string) => void
+): () => void {
+  let es: EventSource | null = null;
+  let isClosed = false;
+  let reconnectTimer: any = null;
+  const cleanTopic = encodeURIComponent(roomId || DEFAULT_ROOM_ID);
+
+  function connect() {
+    if (isClosed) return;
+    try {
+      es = new EventSource(`${NTFY_BASE}/${cleanTopic}/sse`);
+
+      es.onmessage = (event) => {
+        try {
+          const envelope = JSON.parse(event.data);
+          if (envelope && envelope.event === 'message' && envelope.message) {
+            const data = JSON.parse(envelope.message);
+            if (data && data.type === 'candidate_update' && data.candidate) {
+              onRemoteUpdate(data.candidate, data.senderId || '');
+            }
+          }
+        } catch {
+          // Non-JSON or keep-alive ping, ignore
+        }
+      };
+
+      es.onerror = () => {
+        if (es) {
+          es.close();
+          es = null;
+        }
+        if (!isClosed) {
+          clearTimeout(reconnectTimer);
+          reconnectTimer = setTimeout(connect, 3000);
+        }
+      };
+    } catch (err) {
+      console.warn('[RealtimeSync] SSE connection failed:', err);
+      if (!isClosed) {
+        clearTimeout(reconnectTimer);
+        reconnectTimer = setTimeout(connect, 5000);
+      }
+    }
+  }
+
+  connect();
+
+  return () => {
+    isClosed = true;
+    clearTimeout(reconnectTimer);
+    if (es) {
+      es.close();
+      es = null;
+    }
+  };
+}
+
+/**
+ * Fetch candidates state from shared cloud room (Persistent backup)
  */
 export async function fetchRemoteSchedule(roomId: string = getCurrentRoomId()): Promise<Candidate[] | null> {
   const cleanRoom = encodeURIComponent(roomId || DEFAULT_ROOM_ID);
@@ -106,7 +214,6 @@ export async function pushRemoteSchedule(candidates: Candidate[], roomId: string
  * Push update for a single candidate or merge with latest cloud state
  */
 export async function pushCandidateUpdate(updatedCandidate: Candidate, currentAll: Candidate[], roomId: string = getCurrentRoomId()): Promise<Candidate[]> {
-  // Update candidate in local array with timestamp
   const timestamp = new Date().toISOString();
   const candidateWithTime: Candidate = {
     ...updatedCandidate,

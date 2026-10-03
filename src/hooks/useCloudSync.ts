@@ -7,6 +7,8 @@ import {
   setCurrentRoomId, 
   fetchRemoteSchedule, 
   pushRemoteSchedule, 
+  publishLiveCandidateUpdate,
+  subscribeLiveCandidateUpdates,
   DEFAULT_ROOM_ID,
   LAST_SYNC_KEY
 } from '../utils/cloudSync';
@@ -31,6 +33,11 @@ export function useCloudSync({
   });
   const [flashingCandidateId, setFlashingCandidateId] = useState<string | null>(null);
 
+  // Unique client identifier to prevent processing self-echoed events
+  const clientIdRef = useRef<string>(
+    'client_' + Math.random().toString(36).substring(2, 9) + '_' + Date.now().toString(36)
+  );
+
   const candidatesRef = useRef(candidates);
   candidatesRef.current = candidates;
 
@@ -45,7 +52,7 @@ export function useCloudSync({
     hasInitializedRef.current = false;
   };
 
-  // Perform pull and merge
+  // Perform full pull and merge from persistent cloud storage (MantleDB)
   const syncWithCloud = useCallback(async (isInitial = false) => {
     if (isSyncingRef.current) return;
     isSyncingRef.current = true;
@@ -53,7 +60,6 @@ export function useCloudSync({
 
     try {
       const rawRemote = await fetchRemoteSchedule(roomId);
-
       const initMap = new Map(INITIAL_CANDIDATES.map(c => [c.id, c]));
 
       if (!rawRemote || rawRemote.length === 0) {
@@ -104,7 +110,6 @@ export function useCloudSync({
           continue;
         }
 
-        // Compare timestamps or properties
         const remTime = rem.updatedAt ? new Date(rem.updatedAt).getTime() : 0;
         const locTime = loc.updatedAt ? new Date(loc.updatedAt).getTime() : 0;
 
@@ -120,11 +125,23 @@ export function useCloudSync({
         );
 
         if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent || isDeptDifferent) {
-          if (remTime >= locTime) {
+          const remEvaluated = rem.status !== 'scheduled' || rem.score !== undefined || (rem.notes && rem.notes.trim()) || rem.preferredDept;
+          const locEvaluated = loc.status !== 'scheduled' || loc.score !== undefined || (loc.notes && loc.notes.trim()) || loc.preferredDept;
+
+          let chooseRemote = false;
+          if (remEvaluated && !locEvaluated) {
+            chooseRemote = true;
+          } else if (!remEvaluated && locEvaluated) {
+            chooseRemote = false;
+          } else {
+            chooseRemote = remTime >= locTime;
+          }
+
+          if (chooseRemote) {
             const chosen: Candidate = {
               ...init,
               ...rem,
-              preferredDept: rem.preferredDept,
+              preferredDept: rem.preferredDept || loc.preferredDept,
               fitReason: rem.fitReason || loc.fitReason || init?.fitReason || '',
               clubMotivation: rem.clubMotivation || loc.clubMotivation || init?.clubMotivation || '',
             };
@@ -136,7 +153,7 @@ export function useCloudSync({
             const chosen: Candidate = {
               ...init,
               ...loc,
-              preferredDept: loc.preferredDept,
+              preferredDept: loc.preferredDept || rem.preferredDept,
               fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
               clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
             };
@@ -180,18 +197,74 @@ export function useCloudSync({
     }
   }, [roomId, onApplyRemoteCandidates, onCandidateChangedRemotely]);
 
-  // Initial sync on mount
+  // Initial full sync on mount
   useEffect(() => {
     syncWithCloud(true);
   }, [syncWithCloud]);
 
-  // Periodic polling every 3.5 seconds
+  // Real-Time Server-Sent Events (SSE) PubSub listener
+  // Gives sub-second live synchronization across phones, laptops, and tablets
+  useEffect(() => {
+    const unsubscribe = subscribeLiveCandidateUpdates(roomId, (remoteCandidate, senderId) => {
+      // Discard our own broadcasted messages
+      if (senderId && senderId === clientIdRef.current) {
+        return;
+      }
+
+      const currentList = candidatesRef.current;
+      const localCandidate = currentList.find(c => c.id === remoteCandidate.id);
+
+      if (!localCandidate) return;
+
+      const isStatusDiff = localCandidate.status !== remoteCandidate.status;
+      const isScoreDiff = localCandidate.score !== remoteCandidate.score;
+      const isNotesDiff = (localCandidate.notes || '') !== (remoteCandidate.notes || '');
+      const isSlotDiff = localCandidate.timeSlot !== remoteCandidate.timeSlot;
+      const isDeptDiff = (localCandidate.preferredDept || '') !== (remoteCandidate.preferredDept || '');
+
+      if (isStatusDiff || isScoreDiff || isNotesDiff || isSlotDiff || isDeptDiff) {
+        const mergedCandidate: Candidate = {
+          ...localCandidate,
+          ...remoteCandidate,
+          timeSlot: OLD_SLOT_MAP[remoteCandidate.timeSlot] || remoteCandidate.timeSlot || localCandidate.timeSlot,
+          fitReason: localCandidate.fitReason || remoteCandidate.fitReason,
+          clubMotivation: localCandidate.clubMotivation || remoteCandidate.clubMotivation,
+          preferredDept: remoteCandidate.preferredDept !== undefined ? remoteCandidate.preferredDept : localCandidate.preferredDept,
+          score: remoteCandidate.score !== undefined ? remoteCandidate.score : localCandidate.score,
+          notes: remoteCandidate.notes !== undefined ? remoteCandidate.notes : localCandidate.notes,
+          status: remoteCandidate.status || localCandidate.status,
+          updatedAt: remoteCandidate.updatedAt || new Date().toISOString()
+        };
+
+        const updatedList = currentList.map(c => c.id === mergedCandidate.id ? mergedCandidate : c);
+        onApplyRemoteCandidates(updatedList);
+
+        // Visual flash indication
+        setFlashingCandidateId(mergedCandidate.id);
+        setTimeout(() => setFlashingCandidateId(null), 2500);
+
+        // Toast feedback
+        if (onCandidateChangedRemotely) {
+          onCandidateChangedRemotely(mergedCandidate, localCandidate);
+        }
+
+        setSyncStatus('connected');
+        setLastSyncTime(new Date().toLocaleTimeString());
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [roomId, onApplyRemoteCandidates, onCandidateChangedRemotely]);
+
+  // Low-frequency fallback polling (every 45s instead of 3.5s to preserve quota)
   useEffect(() => {
     const interval = setInterval(() => {
       if (!document.hidden) {
         syncWithCloud(false);
       }
-    }, 3500);
+    }, 45000);
 
     return () => clearInterval(interval);
   }, [syncWithCloud]);
@@ -213,7 +286,7 @@ export function useCloudSync({
     };
   }, [syncWithCloud]);
 
-  // Manual push function for candidate updates
+  // Push single candidate update
   const pushUpdate = useCallback(async (updatedCandidate: Candidate) => {
     const candidateWithTime: Candidate = {
       ...updatedCandidate,
@@ -224,7 +297,10 @@ export function useCloudSync({
       c.id === updatedCandidate.id ? candidateWithTime : c
     );
 
-    // Push to cloud immediately
+    // 1. Instantly broadcast to all connected devices via SSE (< 200ms)
+    publishLiveCandidateUpdate(candidateWithTime, clientIdRef.current, roomId);
+
+    // 2. Persist to cloud storage
     setSyncStatus('syncing');
     const success = await pushRemoteSchedule(nextList, roomId);
     setSyncStatus(success ? 'connected' : 'offline');

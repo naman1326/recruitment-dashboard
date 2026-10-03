@@ -57,13 +57,35 @@ const DashboardContent: React.FC = () => {
             );
             const rawSlot = c.timeSlot || init?.timeSlot || '10:30 - 11:00 AM';
             const timeSlot = OLD_SLOT_MAP[rawSlot] || rawSlot;
+
+            const isLocalEvaluated = c.status !== 'scheduled' || c.score !== undefined || (c.notes && c.notes.trim()) || c.preferredDept;
+            const isInitEvaluated = init && (init.status !== 'scheduled' || init.score !== undefined || (init.notes && init.notes.trim()) || init.preferredDept);
+
+            let status = c.status;
+            let score = c.score;
+            let notes = c.notes;
+            let preferredDept = c.preferredDept || init?.preferredDept || undefined;
+            let updatedAt = c.updatedAt || init?.updatedAt;
+
+            if (!isLocalEvaluated && isInitEvaluated && init) {
+              status = init.status;
+              score = init.score;
+              notes = init.notes;
+              preferredDept = init.preferredDept;
+              updatedAt = init.updatedAt;
+            }
+
             return {
               ...init,
               ...c,
+              status,
+              score,
+              notes,
               fitReason: c.fitReason || init?.fitReason || '',
               clubMotivation: c.clubMotivation || init?.clubMotivation || '',
               timeSlot,
-              preferredDept: c.preferredDept || init?.preferredDept || undefined
+              preferredDept,
+              updatedAt
             };
           });
         }

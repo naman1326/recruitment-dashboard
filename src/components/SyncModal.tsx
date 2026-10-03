@@ -137,7 +137,7 @@ export const SyncModal: React.FC<SyncModalProps> = ({
               <input 
                 type="text"
                 className="form-input"
-                placeholder="swarajya-recruitment-2026"
+                placeholder="swarajya-recruitment-live-2026"
                 value={inputRoom}
                 onChange={(e) => setInputRoom(e.target.value)}
               />
