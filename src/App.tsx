@@ -15,7 +15,8 @@ import {
   TIME_SLOTS, 
   PANEL_LIST, 
   STORAGE_KEY, 
-  PANELS_STORAGE_KEY 
+  PANELS_STORAGE_KEY,
+  OLD_SLOT_MAP
 } from './constants/panels';
 import { hydrateFromShareUrl } from './utils/shareUtils';
 import { useCloudSync } from './hooks/useCloudSync';
@@ -37,10 +38,14 @@ const DashboardContent: React.FC = () => {
   // Candidates state with LocalStorage persistence
   const [candidates, setCandidates] = useState<Candidate[]>(() => {
     try {
-      // Clear legacy v1 storage if present to avoid stale schema
+      // Clear legacy storage versions to prevent stale slot formats
       localStorage.removeItem('recruitment_interview_members_v1');
 
-      const saved = localStorage.getItem(STORAGE_KEY);
+      let saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) {
+        saved = localStorage.getItem('recruitment_interview_members_v2');
+      }
+
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -50,12 +55,14 @@ const DashboardContent: React.FC = () => {
               (c.rollNo && i.rollNo && i.rollNo.toLowerCase() === c.rollNo.toLowerCase()) || 
               i.name.toLowerCase() === c.name.toLowerCase()
             );
+            const rawSlot = c.timeSlot || init?.timeSlot || '10:30 - 11:00 AM';
+            const timeSlot = OLD_SLOT_MAP[rawSlot] || rawSlot;
             return {
               ...init,
               ...c,
               fitReason: c.fitReason || init?.fitReason || '',
               clubMotivation: c.clubMotivation || init?.clubMotivation || '',
-              timeSlot: c.timeSlot || init?.timeSlot || '10:00 - 10:30 AM'
+              timeSlot
             };
           });
         }
@@ -129,12 +136,19 @@ const DashboardContent: React.FC = () => {
     const loadShared = async () => {
       const shared = await hydrateFromShareUrl();
       if (shared && shared.candidates && shared.candidates.length > 0) {
-        setCandidates(shared.candidates);
+        const mappedCandidates = shared.candidates.map(c => {
+          const rawSlot = c.timeSlot || '10:30 - 11:00 AM';
+          return {
+            ...c,
+            timeSlot: OLD_SLOT_MAP[rawSlot] || rawSlot
+          };
+        });
+        setCandidates(mappedCandidates);
         if (shared.panelConfigs) {
           setPanelConfigs(shared.panelConfigs);
         }
-        pushFullSchedule(shared.candidates);
-        showToast(`Hydrated ${shared.candidates.length} candidates from shared link!`);
+        pushFullSchedule(mappedCandidates);
+        showToast(`Hydrated ${mappedCandidates.length} candidates from shared link!`);
       }
     };
     loadShared();

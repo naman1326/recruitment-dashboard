@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Candidate } from '../types';
 import { INITIAL_CANDIDATES } from '../constants/initialData';
+import { OLD_SLOT_MAP } from '../constants/panels';
 import { 
   getCurrentRoomId, 
   setCurrentRoomId, 
@@ -75,9 +76,12 @@ export function useCloudSync({
           (rem.rollNo && i.rollNo && i.rollNo.toLowerCase() === rem.rollNo.toLowerCase()) || 
           i.name.toLowerCase() === rem.name.toLowerCase()
         );
+        const rawSlot = rem.timeSlot || init?.timeSlot || '10:30 - 11:00 AM';
+        const timeSlot = OLD_SLOT_MAP[rawSlot] || rawSlot;
         return {
           ...init,
           ...rem,
+          timeSlot,
           fitReason: rem.fitReason || init?.fitReason || '',
           clubMotivation: rem.clubMotivation || init?.clubMotivation || '',
         };

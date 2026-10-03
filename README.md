@@ -16,10 +16,10 @@ A dedicated, high-performance, mobile-responsive web dashboard tailored for cond
   - *(Panel 5 strictly excluded per requirements)*
 
 - **Structured 30-Minute Interview Slots (15-min intervals)**:
-  - **Slot 1**: `10:00 - 10:30 AM`
-  - **Slot 2**: `10:45 - 11:15 AM`
-  - **Slot 3**: `11:30 AM - 12:00 PM`
-  - **Slot 4**: `12:15 - 12:45 PM`
+  - **Slot 1**: `10:30 - 11:00 AM`
+  - **Slot 2**: `11:15 - 11:45 AM`
+  - **Slot 3**: `12:00 - 12:30 PM`
+  - **Slot 4**: `12:45 - 1:15 PM`
   - **Slot 5**: `3:00 - 3:30 PM` (Post-lunch session)
   - **Slot 6**: `3:45 - 4:15 PM` (Overflow)
   - **Slot 7**: `4:30 - 5:00 PM` (Overflow)
