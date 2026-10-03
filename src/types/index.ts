@@ -21,6 +21,7 @@ export interface Candidate {
   slotIndex?: number;
   domainPref1?: string;
   domainPref2?: string;
+  preferredDept?: string;
   fitReason?: string;
   clubMotivation?: string;
   status: CandidateStatus;

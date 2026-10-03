@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Phone, MessageSquare, Copy, Edit3, Tag } from 'lucide-react';
+import { Phone, MessageSquare, Copy, Edit3, Tag, Check, Plus } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, PanelType } from '../types';
 import { STATUS_CONFIG } from '../constants/panels';
 import { INITIAL_CANDIDATES } from '../constants/initialData';
@@ -10,6 +10,7 @@ interface TableViewProps {
   panelConfigs: Record<PanelType, PanelConfig>;
   onSelectCandidate: (c: Candidate) => void;
   onUpdateStatus: (id: string, s: CandidateStatus) => void;
+  onUpdatePreferredDept?: (id: string, dept?: string) => void;
   flashingCandidateId?: string | null;
 }
 
@@ -18,6 +19,7 @@ export const TableView: React.FC<TableViewProps> = ({
   panelConfigs,
   onSelectCandidate,
   onUpdateStatus,
+  onUpdatePreferredDept,
   flashingCandidateId
 }) => {
   const { showToast } = useToast();
@@ -156,23 +158,65 @@ export const TableView: React.FC<TableViewProps> = ({
                   </select>
                 </td>
 
-                {/* Domain Prefs */}
-                <td>
-                  <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+                {/* Domain Prefs & Selection */}
+                <td onClick={(e) => e.stopPropagation()}>
+                  <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap', alignItems: 'center' }}>
                     {c.domainPref1 && (
-                      <span className="domain-tag primary">
-                        <Tag size={10} />
-                        {c.domainPref1}
-                      </span>
+                      <button
+                        type="button"
+                        className={`domain-btn ${c.preferredDept === c.domainPref1 ? 'selected' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const next = c.preferredDept === c.domainPref1 ? undefined : c.domainPref1;
+                          onUpdatePreferredDept?.(c.id, next);
+                        }}
+                        title={c.preferredDept === c.domainPref1 ? 'Selected (click to unselect)' : `Choose ${c.domainPref1}`}
+                      >
+                        {c.preferredDept === c.domainPref1 ? <Check size={10} /> : <Tag size={9} />}
+                        <span>{c.domainPref1}</span>
+                      </button>
                     )}
                     {c.domainPref2 && (
-                      <span className="domain-tag">
-                        {c.domainPref2}
-                      </span>
+                      <button
+                        type="button"
+                        className={`domain-btn ${c.preferredDept === c.domainPref2 ? 'selected' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const next = c.preferredDept === c.domainPref2 ? undefined : c.domainPref2;
+                          onUpdatePreferredDept?.(c.id, next);
+                        }}
+                        title={c.preferredDept === c.domainPref2 ? 'Selected (click to unselect)' : `Choose ${c.domainPref2}`}
+                      >
+                        {c.preferredDept === c.domainPref2 ? <Check size={10} /> : null}
+                        <span>{c.domainPref2}</span>
+                      </button>
                     )}
-                    {!c.domainPref1 && !c.domainPref2 && (
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>—</span>
-                    )}
+                    {(() => {
+                      const isOther = Boolean(
+                        c.preferredDept &&
+                        c.preferredDept !== c.domainPref1 &&
+                        c.preferredDept !== c.domainPref2
+                      );
+                      return (
+                        <button
+                          type="button"
+                          className={`domain-btn other-btn ${isOther ? 'selected' : ''}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            const currentVal = isOther ? c.preferredDept : '';
+                            const promptVal = window.prompt(`Enter preferred department for ${c.name}${isOther ? ' (leave empty to unselect)' : ''}:`, currentVal || '');
+                            if (promptVal !== null) {
+                              const trimmed = promptVal.trim();
+                              onUpdatePreferredDept?.(c.id, trimmed ? trimmed : undefined);
+                            }
+                          }}
+                          title={isOther ? `Custom: ${c.preferredDept}` : 'Enter other department manually'}
+                        >
+                          {isOther ? <Check size={10} /> : <Plus size={9} />}
+                          <span>{isOther ? c.preferredDept : 'Other'}</span>
+                        </button>
+                      );
+                    })()}
                   </div>
                 </td>
 

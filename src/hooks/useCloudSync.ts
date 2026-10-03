@@ -112,17 +112,19 @@ export function useCloudSync({
         const isScoreDifferent = rem.score !== loc.score;
         const isNotesDifferent = (rem.notes || '') !== (loc.notes || '');
         const isSlotDifferent = rem.timeSlot !== loc.timeSlot;
+        const isDeptDifferent = (rem.preferredDept || '') !== (loc.preferredDept || '');
 
         const init = initMap.get(rem.id) || INITIAL_CANDIDATES.find(i => 
           (rem.rollNo && i.rollNo && i.rollNo.toLowerCase() === rem.rollNo.toLowerCase()) || 
           i.name.toLowerCase() === rem.name.toLowerCase()
         );
 
-        if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent) {
+        if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent || isDeptDifferent) {
           if (remTime >= locTime) {
             const chosen: Candidate = {
               ...init,
               ...rem,
+              preferredDept: rem.preferredDept,
               fitReason: rem.fitReason || loc.fitReason || init?.fitReason || '',
               clubMotivation: rem.clubMotivation || loc.clubMotivation || init?.clubMotivation || '',
             };
@@ -134,16 +136,18 @@ export function useCloudSync({
             const chosen: Candidate = {
               ...init,
               ...loc,
+              preferredDept: loc.preferredDept,
               fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
               clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
             };
             merged.push(chosen);
           }
         } else {
-          // Keep current state but ensure questionnaire answers are populated
+          // Keep current state but ensure questionnaire answers and department are populated
           const chosen: Candidate = {
             ...init,
             ...loc,
+            preferredDept: loc.preferredDept || rem.preferredDept,
             fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
             clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
           };

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Phone, MessageSquare, Copy, Clock, Award, Tag, FileText, ChevronDown } from 'lucide-react';
+import { Phone, MessageSquare, Copy, Clock, Award, Tag, FileText, ChevronDown, Check, Plus } from 'lucide-react';
 import { Candidate, CandidateStatus, PanelConfig, TimeSlotType } from '../types';
 import { STATUS_CONFIG, TIME_SLOTS } from '../constants/panels';
 import { INITIAL_CANDIDATES } from '../constants/initialData';
@@ -11,6 +11,7 @@ interface CandidateCardProps {
   onSelectCandidate: (candidate: Candidate) => void;
   onUpdateStatus: (id: string, status: CandidateStatus) => void;
   onMoveSlot: (id: string, slot: TimeSlotType) => void;
+  onUpdatePreferredDept?: (id: string, dept?: string) => void;
   isFlashing?: boolean;
 }
 
@@ -20,6 +21,7 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
   onSelectCandidate,
   onUpdateStatus,
   onMoveSlot,
+  onUpdatePreferredDept,
   isFlashing
 }) => {
   const { showToast } = useToast();
@@ -112,19 +114,64 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
         ) : null}
       </div>
 
-      {/* Domain Preferences */}
-      <div className="domain-tags-wrap">
+      {/* Domain Preferences & Selection */}
+      <div className="domain-tags-wrap" onClick={(e) => e.stopPropagation()}>
         {candidate.domainPref1 && (
-          <span className="domain-tag primary">
-            <Tag size={11} />
+          <button
+            type="button"
+            className={`domain-btn ${candidate.preferredDept === candidate.domainPref1 ? 'selected' : ''}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              const next = candidate.preferredDept === candidate.domainPref1 ? undefined : candidate.domainPref1;
+              onUpdatePreferredDept?.(candidate.id, next);
+            }}
+            title={candidate.preferredDept === candidate.domainPref1 ? 'Preferred department selected (click to clear)' : `Choose ${candidate.domainPref1} as preferred`}
+          >
+            {candidate.preferredDept === candidate.domainPref1 ? <Check size={11} /> : <Tag size={10} />}
             <span>{candidate.domainPref1}</span>
-          </span>
+          </button>
         )}
         {candidate.domainPref2 && (
-          <span className="domain-tag">
+          <button
+            type="button"
+            className={`domain-btn ${candidate.preferredDept === candidate.domainPref2 ? 'selected' : ''}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              const next = candidate.preferredDept === candidate.domainPref2 ? undefined : candidate.domainPref2;
+              onUpdatePreferredDept?.(candidate.id, next);
+            }}
+            title={candidate.preferredDept === candidate.domainPref2 ? 'Preferred department selected (click to clear)' : `Choose ${candidate.domainPref2} as preferred`}
+          >
+            {candidate.preferredDept === candidate.domainPref2 ? <Check size={11} /> : null}
             <span>{candidate.domainPref2}</span>
-          </span>
+          </button>
         )}
+        {(() => {
+          const isOther = Boolean(
+            candidate.preferredDept &&
+            candidate.preferredDept !== candidate.domainPref1 &&
+            candidate.preferredDept !== candidate.domainPref2
+          );
+          return (
+            <button
+              type="button"
+              className={`domain-btn other-btn ${isOther ? 'selected' : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                const currentVal = isOther ? candidate.preferredDept : '';
+                const promptVal = window.prompt(`Enter preferred department for ${candidate.name}${isOther ? ' (leave empty to unselect)' : ''}:`, currentVal || '');
+                if (promptVal !== null) {
+                  const trimmed = promptVal.trim();
+                  onUpdatePreferredDept?.(candidate.id, trimmed ? trimmed : undefined);
+                }
+              }}
+              title={isOther ? `Custom preferred department: ${candidate.preferredDept} (click to change/clear)` : 'Enter other department manually'}
+            >
+              {isOther ? <Check size={11} /> : <Plus size={10} />}
+              <span>{isOther ? candidate.preferredDept : 'Other'}</span>
+            </button>
+          );
+        })()}
       </div>
 
       {/* Questionnaire Form Answers Accordion */}

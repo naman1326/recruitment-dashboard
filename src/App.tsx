@@ -62,7 +62,8 @@ const DashboardContent: React.FC = () => {
               ...c,
               fitReason: c.fitReason || init?.fitReason || '',
               clubMotivation: c.clubMotivation || init?.clubMotivation || '',
-              timeSlot
+              timeSlot,
+              preferredDept: c.preferredDept || init?.preferredDept || undefined
             };
           });
         }
@@ -209,6 +210,24 @@ const DashboardContent: React.FC = () => {
     pushUpdate(updatedWithTime);
   };
 
+  const handleUpdatePreferredDept = (id: string, dept?: string) => {
+    const target = candidates.find(c => c.id === id);
+    if (target) {
+      const updated: Candidate = {
+        ...target,
+        preferredDept: dept,
+        updatedAt: new Date().toISOString()
+      };
+      setCandidates(prev => prev.map(c => c.id === id ? updated : c));
+      pushUpdate(updated);
+      if (dept) {
+        showToast(`Preferred department for ${target.name} set to ${dept}`);
+      } else {
+        showToast(`Preferred department cleared for ${target.name}`);
+      }
+    }
+  };
+
   const handleDeleteCandidate = (id: string) => {
     const nextList = candidates.filter(c => c.id !== id);
     setCandidates(nextList);
@@ -288,9 +307,10 @@ const DashboardContent: React.FC = () => {
         const matchesPhone = c.mobile.includes(q);
         const matchesDomain1 = c.domainPref1?.toLowerCase().includes(q) ?? false;
         const matchesDomain2 = c.domainPref2?.toLowerCase().includes(q) ?? false;
+        const matchesPreferred = c.preferredDept?.toLowerCase().includes(q) ?? false;
         const matchesFit = c.fitReason?.toLowerCase().includes(q) ?? false;
         const matchesMot = c.clubMotivation?.toLowerCase().includes(q) ?? false;
-        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2 && !matchesFit && !matchesMot) {
+        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2 && !matchesPreferred && !matchesFit && !matchesMot) {
           return false;
         }
       }
@@ -389,6 +409,7 @@ const DashboardContent: React.FC = () => {
                         onSelectCandidate={setSelectedCandidate}
                         onUpdateStatus={handleUpdateStatus}
                         onMoveSlot={handleMoveSlot}
+                        onUpdatePreferredDept={handleUpdatePreferredDept}
                         isFlashing={flashingCandidateId === c.id}
                       />
                     ))}
@@ -445,6 +466,7 @@ const DashboardContent: React.FC = () => {
                         onSelectCandidate={setSelectedCandidate}
                         onUpdateStatus={handleUpdateStatus}
                         onMoveSlot={handleMoveSlot}
+                        onUpdatePreferredDept={handleUpdatePreferredDept}
                         isFlashing={flashingCandidateId === c.id}
                       />
                     ))
@@ -466,6 +488,7 @@ const DashboardContent: React.FC = () => {
           panelConfigs={panelConfigs}
           onSelectCandidate={setSelectedCandidate}
           onUpdateStatus={handleUpdateStatus}
+          onUpdatePreferredDept={handleUpdatePreferredDept}
           flashingCandidateId={flashingCandidateId}
         />
       )}

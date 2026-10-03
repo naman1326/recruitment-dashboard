@@ -892,6 +892,66 @@ input, select, textarea {
   background: rgba(255, 153, 51, 0.08);
 }
 
+/* Interactive Domain Buttons */
+.domain-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  font-family: inherit;
+  line-height: 1.25;
+}
+
+.domain-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.domain-btn:active {
+  transform: translateY(0);
+}
+
+.domain-btn.selected {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.24) 0%, rgba(255, 153, 51, 0.32) 100%);
+  color: #ffb366;
+  border-color: #ff9933;
+  box-shadow: 0 0 10px rgba(255, 153, 51, 0.25);
+  font-weight: 700;
+}
+
+.domain-btn.other-btn {
+  border-style: dashed;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.domain-btn.other-btn:hover {
+  border-style: dashed;
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.07);
+}
+
+.domain-btn.other-btn.selected {
+  border-style: solid;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22) 0%, rgba(14, 165, 233, 0.32) 100%);
+  color: #7dd3fc;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+  font-weight: 700;
+}
+
 /* Card Actions & Status Dropdown */
 .card-actions-bar {
   display: flex;
