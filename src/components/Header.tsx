@@ -14,6 +14,7 @@ import { exportToExcel, exportToCSV } from '../utils/excelParser';
 import { createShareableUrl } from '../utils/shareUtils';
 import { useToast } from './Toast';
 import { SyncStatus } from '../hooks/useCloudSync';
+import logoImg from '../assets/logo.png';
 
 interface HeaderProps {
   candidates: Candidate[];
@@ -89,13 +90,9 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="dash-header-top">
         <div className="dash-brand-container">
           <img 
-            src="/logo.png" 
+            src={logoImg} 
             alt="Swarajya Logo" 
-            className="dash-logo"
-            onError={(e) => {
-              // fallback if not yet copied to root
-              (e.target as HTMLImageElement).src = './logo.png';
-            }} 
+            className="dash-logo" 
           />
           <div className="brand-text-col">
             <h1 className="brand-title">स्वराज्य</h1>
