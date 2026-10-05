@@ -282,7 +282,8 @@ export function downloadExcelTemplate() {
     'Panel 1': ['Naman Ghodake', 'Atharva Deshpande', 'Rashi Palod', 'Shunyam Firke'],
     'Panel 2': ['Atharava Chougule', 'Sai Kadam', 'Ankana'],
     'Panel 3': ['Omkar Japtap', 'Sharanya', 'Om Jadhav'],
-    'Panel 4': ['Shravani', 'Pranav', 'Riddh', 'Om Deshmukh']
+    'Panel 4': ['Shravani', 'Pranav', 'Riddh', 'Om Deshmukh'],
+    'Panel 5': ['All Core Members']
   };
 
   for (const panel of ALLOWED_PANELS) {

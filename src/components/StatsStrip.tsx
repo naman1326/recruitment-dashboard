@@ -20,7 +20,7 @@ export const StatsStrip: React.FC<StatsStripProps> = ({
   const total = candidates.length;
   // Calculate unique candidates based on rollNo or lowercased name
   const uniqueCandidateKeys = new Set(
-    candidates.map(c => (c.rollNo ? c.rollNo.toLowerCase().strip?.() || c.rollNo.toLowerCase() : c.name.toLowerCase().trim()))
+    candidates.map(c => (c.rollNo ? c.rollNo.toLowerCase().trim() : c.name.toLowerCase().trim()))
   );
   const uniqueCount = uniqueCandidateKeys.size;
   const rescheduledCount = total - uniqueCount;
@@ -111,6 +111,24 @@ export const StatsStrip: React.FC<StatsStripProps> = ({
           </div>
         </div>
         <div className="stat-number" style={{ color: 'var(--confirm)' }}>{completed}</div>
+      </div>
+
+      {/* On Hold */}
+      <div 
+        className={`stat-card stat-card-hold ${selectedStatus === 'on-hold' && selectedCategory === 'ALL' ? 'is-active-filter' : ''}`}
+        onClick={() => {
+          onSelectCategory('ALL');
+          onSelectStatus(selectedStatus === 'on-hold' ? 'ALL' : 'on-hold');
+        }}
+        title="Filter on-hold candidates"
+      >
+        <div className="stat-card-top">
+          <span className="stat-label">On Hold</span>
+          <div className="stat-icon">
+            <PauseCircle size={18} color="var(--brand-saffron-alt)" />
+          </div>
+        </div>
+        <div className="stat-number" style={{ color: 'var(--brand-saffron-alt)' }}>{onHold}</div>
       </div>
 
       {/* Absent */}
