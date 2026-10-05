@@ -54,6 +54,7 @@ export const TableView: React.FC<TableViewProps> = ({
             <th>Candidate Name</th>
             <th>Roll / Reg No</th>
             <th>Panel</th>
+            <th>Category</th>
             <th>Time Slot</th>
             <th>Status</th>
             <th>Domain Preferences</th>
@@ -124,11 +125,24 @@ export const TableView: React.FC<TableViewProps> = ({
                 {/* Panel */}
                 <td>
                   <span 
-                    className={`panel-tag panel-${c.panel.replace('Panel ', '')}`}
-                    style={{ color: config.color, border: `1px solid ${config.borderColor}` }}
+                    className={`panel-tag panel-${(c.panel || 'Panel 1').replace('Panel ', '')}`}
+                    style={{ color: config?.color || 'var(--brand-saffron)', border: `1px solid ${config?.borderColor || 'var(--border-medium)'}` }}
                   >
                     {c.panel}
                   </span>
+                </td>
+
+                {/* Category */}
+                <td>
+                  {(c.category || init?.category) ? (
+                    <span 
+                      className={`badge-category ${(c.category || init?.category) === 'Filled Form Late' ? 'badge-category-late' : 'badge-category-missed'}`}
+                    >
+                      {(c.category || init?.category) === 'Filled Form Late' ? 'Late Form' : 'Missed 1st Interview'}
+                    </span>
+                  ) : (
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Standard</span>
+                  )}
                 </td>
 
                 {/* Slot */}

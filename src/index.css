@@ -31,6 +31,7 @@
   --panel-2: #1fae5f;
   --panel-3: #38bdf8;
   --panel-4: #a855f7;
+  --panel-5: #ec4899;
   
   /* Typography Tokens */
   --font-title: 'Yatra One', cursive;
@@ -345,6 +346,7 @@ input, select, textarea {
 .panel-card-summary.panel-2::before { background: var(--panel-2); }
 .panel-card-summary.panel-3::before { background: var(--panel-3); }
 .panel-card-summary.panel-4::before { background: var(--panel-4); }
+.panel-card-summary.panel-5::before { background: var(--panel-5); }
 
 .panel-card-summary:hover {
   transform: translateY(-3px);
@@ -677,6 +679,10 @@ input, select, textarea {
 .filter-chip.chip-panel-4.is-active {
   background: var(--panel-4);
 }
+.filter-chip.chip-panel-5.is-active {
+  background: var(--panel-5);
+  color: #fff;
+}
 
 /* Results Count & Reset */
 .results-strip {
@@ -865,6 +871,32 @@ input, select, textarea {
 .panel-tag.panel-2 { background: rgba(31, 174, 95, 0.15); color: var(--panel-2); border: 1px solid rgba(31, 174, 95, 0.3); }
 .panel-tag.panel-3 { background: rgba(56, 189, 248, 0.15); color: var(--panel-3); border: 1px solid rgba(56, 189, 248, 0.3); }
 .panel-tag.panel-4 { background: rgba(168, 85, 247, 0.15); color: var(--panel-4); border: 1px solid rgba(168, 85, 247, 0.3); }
+.panel-tag.panel-5 { background: rgba(236, 72, 153, 0.15); color: var(--panel-5); border: 1px solid rgba(236, 72, 153, 0.3); }
+
+/* Category Tags */
+.badge-category {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-category-late {
+  background: rgba(255, 153, 51, 0.15);
+  color: #ff9933;
+  border: 1px solid rgba(255, 153, 51, 0.35);
+}
+
+.badge-category-missed {
+  background: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+  border: 1px solid rgba(236, 72, 153, 0.35);
+}
 
 /* Domains Tags */
 .domain-tags-wrap {

@@ -1,4 +1,4 @@
-export type PanelType = 'Panel 1' | 'Panel 2' | 'Panel 3' | 'Panel 4';
+export type PanelType = 'Panel 1' | 'Panel 2' | 'Panel 3' | 'Panel 4' | 'Panel 5';
 
 export type TimeSlotType =
   | '10:30 - 11:00 AM'
@@ -7,9 +7,16 @@ export type TimeSlotType =
   | '12:45 - 1:15 PM'
   | '3:00 - 3:30 PM'
   | '3:45 - 4:15 PM'
-  | '4:30 - 5:00 PM';
+  | '4:30 - 5:00 PM'
+  | '9:30 - 10:00 PM'
+  | '10:00 - 10:30 PM'
+  | '10:30 - 11:00 PM'
+  | '11:00 - 11:30 PM'
+  | '11:30 PM - 12:00 AM';
 
 export type CandidateStatus = 'scheduled' | 'interviewing' | 'completed' | 'on-hold' | 'absent';
+
+export type CandidateCategory = 'Filled Form Late' | 'Missed First Interview';
 
 export interface Candidate {
   id: string;
@@ -25,6 +32,7 @@ export interface Candidate {
   fitReason?: string;
   clubMotivation?: string;
   status: CandidateStatus;
+  category?: CandidateCategory | string;
   notes?: string;
   score?: number;
   createdAt: string;
@@ -48,5 +56,7 @@ export interface FilterState {
   selectedPanel: PanelType | 'ALL';
   selectedSlot: TimeSlotType | 'ALL';
   selectedStatus: CandidateStatus | 'ALL';
+  selectedCategory: string | 'ALL';
   viewMode: ViewMode;
 }
+

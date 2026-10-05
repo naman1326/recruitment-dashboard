@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, UserCheck } from 'lucide-react';
 import { Candidate, PanelConfig, PanelType } from '../types';
+import { PANEL_LIST } from '../constants/panels';
 
 interface PanelBannerProps {
   panelConfigs: Record<PanelType, PanelConfig>;
@@ -8,8 +9,6 @@ interface PanelBannerProps {
   selectedPanel: PanelType | 'ALL';
   onSelectPanel: (panel: PanelType | 'ALL') => void;
 }
-
-const PANEL_KEYS: PanelType[] = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4'];
 
 export const PanelBanner: React.FC<PanelBannerProps> = ({
   panelConfigs,
@@ -19,8 +18,17 @@ export const PanelBanner: React.FC<PanelBannerProps> = ({
 }) => {
   return (
     <div className="panel-grid-banner">
-      {PANEL_KEYS.map((panelKey, idx) => {
-        const config = panelConfigs[panelKey];
+      {PANEL_LIST.map((panelKey, idx) => {
+        const config = panelConfigs[panelKey] || {
+          id: panelKey,
+          name: panelKey,
+          color: '#ec4899',
+          bgLight: 'rgba(236, 72, 153, 0.12)',
+          borderColor: 'rgba(236, 72, 153, 0.35)',
+          badgeClass: 'badge-panel-5',
+          interviewers: ['All Core Members']
+        };
+
         const panelCandidates = candidates.filter(c => c.panel === panelKey);
         const interviewingCount = panelCandidates.filter(c => c.status === 'interviewing').length;
         const completedCount = panelCandidates.filter(c => c.status === 'completed').length;

@@ -40,17 +40,20 @@ const DashboardContent: React.FC = () => {
     try {
       // Clear legacy storage versions to prevent stale slot formats
       localStorage.removeItem('recruitment_interview_members_v1');
+      localStorage.removeItem('recruitment_interview_members_v2');
 
       let saved = localStorage.getItem(STORAGE_KEY);
       if (!saved) {
-        saved = localStorage.getItem('recruitment_interview_members_v2');
+        saved = localStorage.getItem('recruitment_interview_members_v3');
       }
 
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
           const initMap = new Map(INITIAL_CANDIDATES.map(c => [c.id, c]));
-          return parsed.map((c: Candidate) => {
+          const existingIds = new Set(parsed.map((c: Candidate) => c.id));
+
+          const hydrated = parsed.map((c: Candidate) => {
             const init = initMap.get(c.id) || INITIAL_CANDIDATES.find(i => 
               (c.rollNo && i.rollNo && i.rollNo.toLowerCase() === c.rollNo.toLowerCase()) || 
               i.name.toLowerCase() === c.name.toLowerCase()
@@ -83,11 +86,22 @@ const DashboardContent: React.FC = () => {
               notes,
               fitReason: c.fitReason || init?.fitReason || '',
               clubMotivation: c.clubMotivation || init?.clubMotivation || '',
+              category: c.category || init?.category,
               timeSlot,
               preferredDept,
               updatedAt
             };
           });
+
+          // Ensure any candidates from INITIAL_CANDIDATES (e.g. Panel 5 candidates) missing in saved state are added
+          const missingFromInit = INITIAL_CANDIDATES.filter(i => !existingIds.has(i.id));
+          const finalMap = new Map<string, Candidate>();
+          for (const cand of [...hydrated, ...missingFromInit]) {
+            if (!finalMap.has(cand.id)) {
+              finalMap.set(cand.id, cand);
+            }
+          }
+          return Array.from(finalMap.values());
         }
       }
     } catch (e) {
@@ -99,9 +113,14 @@ const DashboardContent: React.FC = () => {
   // Panel configs state (interviewers) with LocalStorage persistence
   const [panelConfigs, setPanelConfigs] = useState<Record<PanelType, PanelConfig>>(() => {
     try {
-      const saved = localStorage.getItem(PANELS_STORAGE_KEY);
+      const saved = localStorage.getItem(PANELS_STORAGE_KEY) || localStorage.getItem('recruitment_interview_panels_v1');
       if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        return {
+          ...INITIAL_PANEL_CONFIGS,
+          ...parsed,
+          'Panel 5': parsed['Panel 5'] || INITIAL_PANEL_CONFIGS['Panel 5']
+        };
       }
     } catch (e) {
       console.error('Failed reading panel configs from localStorage:', e);
@@ -151,6 +170,7 @@ const DashboardContent: React.FC = () => {
     selectedPanel: 'ALL',
     selectedSlot: 'ALL',
     selectedStatus: 'ALL',
+    selectedCategory: 'ALL',
     viewMode: 'by-slot'
   });
 
@@ -289,7 +309,7 @@ const DashboardContent: React.FC = () => {
   };
 
   const handleResetData = () => {
-    if (window.confirm('Reset candidate schedule back to initial 114 candidates from panel.xlsx?')) {
+    if (window.confirm('Reset candidate schedule back to default dataset (including Panel 5)?')) {
       setCandidates(INITIAL_CANDIDATES);
       setPanelConfigs(INITIAL_PANEL_CONFIGS);
       pushFullSchedule(INITIAL_CANDIDATES);
@@ -321,6 +341,11 @@ const DashboardContent: React.FC = () => {
         return false;
       }
 
+      // Category filter
+      if (filters.selectedCategory !== 'ALL' && c.category !== filters.selectedCategory) {
+        return false;
+      }
+
       // Search query
       if (filters.searchQuery.trim()) {
         const q = filters.searchQuery.toLowerCase();
@@ -332,7 +357,8 @@ const DashboardContent: React.FC = () => {
         const matchesPreferred = c.preferredDept?.toLowerCase().includes(q) ?? false;
         const matchesFit = c.fitReason?.toLowerCase().includes(q) ?? false;
         const matchesMot = c.clubMotivation?.toLowerCase().includes(q) ?? false;
-        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2 && !matchesPreferred && !matchesFit && !matchesMot) {
+        const matchesCategory = c.category?.toLowerCase().includes(q) ?? false;
+        if (!matchesName && !matchesRoll && !matchesPhone && !matchesDomain1 && !matchesDomain2 && !matchesPreferred && !matchesFit && !matchesMot && !matchesCategory) {
           return false;
         }
       }
@@ -355,7 +381,7 @@ const DashboardContent: React.FC = () => {
         roomId={roomId}
       />
 
-      {/* 4 Panels Banner with Interviewers */}
+      {/* Panels Banner with Interviewers */}
       <PanelBanner 
         panelConfigs={panelConfigs}
         candidates={candidates}
@@ -368,6 +394,8 @@ const DashboardContent: React.FC = () => {
         candidates={candidates}
         selectedStatus={filters.selectedStatus}
         onSelectStatus={(st) => setFilters(prev => ({ ...prev, selectedStatus: st }))}
+        selectedCategory={filters.selectedCategory}
+        onSelectCategory={(cat) => setFilters(prev => ({ ...prev, selectedCategory: cat }))}
       />
 
       {/* Search and Filters Bar */}
@@ -380,6 +408,8 @@ const DashboardContent: React.FC = () => {
         onSelectSlot={(s) => setFilters(prev => ({ ...prev, selectedSlot: s }))}
         selectedStatus={filters.selectedStatus}
         onSelectStatus={(st) => setFilters(prev => ({ ...prev, selectedStatus: st }))}
+        selectedCategory={filters.selectedCategory}
+        onSelectCategory={(cat) => setFilters(prev => ({ ...prev, selectedCategory: cat }))}
         viewMode={filters.viewMode}
         onViewModeChange={(m) => setFilters(prev => ({ ...prev, viewMode: m }))}
         totalFiltered={filteredCandidates.length}
@@ -389,6 +419,7 @@ const DashboardContent: React.FC = () => {
           selectedPanel: 'ALL',
           selectedSlot: 'ALL',
           selectedStatus: 'ALL',
+          selectedCategory: 'ALL',
           viewMode: filters.viewMode
         })}
       />

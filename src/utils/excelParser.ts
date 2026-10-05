@@ -40,7 +40,9 @@ export function normalizePhone(raw: any): string {
   return digits;
 }
 
-const ALLOWED_PANELS: PanelType[] = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4'];
+import { PANEL_LIST } from '../constants/panels';
+
+const ALLOWED_PANELS: PanelType[] = PANEL_LIST;
 
 export async function parseExcelFile(file: File): Promise<ParseResult> {
   const data = await file.arrayBuffer();

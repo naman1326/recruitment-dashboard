@@ -7,17 +7,27 @@ export const TIME_SLOTS: { id: TimeSlotType; label: string; number: number; isOv
   { id: '12:45 - 1:15 PM', label: 'Slot 4 (12:45 - 1:15 PM)', number: 4 },
   { id: '3:00 - 3:30 PM', label: 'Slot 5 (3:00 - 3:30 PM - Post Lunch)', number: 5 },
   { id: '3:45 - 4:15 PM', label: 'Slot 6 (3:45 - 4:15 PM - Overflow)', number: 6, isOverflow: true },
-  { id: '4:30 - 5:00 PM', label: 'Slot 7 (4:30 - 5:00 PM - Overflow)', number: 7, isOverflow: true }
+  { id: '4:30 - 5:00 PM', label: 'Slot 7 (4:30 - 5:00 PM - Overflow)', number: 7, isOverflow: true },
+  { id: '9:30 - 10:00 PM', label: 'Slot 8 (9:30 - 10:00 PM - Panel 5)', number: 8 },
+  { id: '10:00 - 10:30 PM', label: 'Slot 9 (10:00 - 10:30 PM - Panel 5)', number: 9 },
+  { id: '10:30 - 11:00 PM', label: 'Slot 10 (10:30 - 11:00 PM - Panel 5)', number: 10 },
+  { id: '11:00 - 11:30 PM', label: 'Slot 11 (11:00 - 11:30 PM - Panel 5)', number: 11 },
+  { id: '11:30 PM - 12:00 AM', label: 'Slot 12 (11:30 PM - 12:00 AM - Panel 5)', number: 12 }
 ];
 
 export const OLD_SLOT_MAP: Record<string, TimeSlotType> = {
   '10:00 - 10:30 AM': '10:30 - 11:00 AM',
   '10:45 - 11:15 AM': '11:15 - 11:45 AM',
   '11:30 AM - 12:00 PM': '12:00 - 12:30 PM',
-  '12:15 - 12:45 PM': '12:45 - 1:15 PM'
+  '12:15 - 12:45 PM': '12:45 - 1:15 PM',
+  '9:30-10:00pm': '9:30 - 10:00 PM',
+  '10:00-10:30pm': '10:00 - 10:30 PM',
+  '10:30-11:00pm': '10:30 - 11:00 PM',
+  '11:00-11:30pm': '11:00 - 11:30 PM',
+  '11:30-12:00pm': '11:30 PM - 12:00 AM'
 };
 
-export const PANEL_LIST: PanelType[] = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4'];
+export const PANEL_LIST: PanelType[] = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4', 'Panel 5'];
 
 export const STATUS_CONFIG: Record<CandidateStatus, { label: string; color: string; bg: string; border: string }> = {
   scheduled: {
@@ -52,6 +62,7 @@ export const STATUS_CONFIG: Record<CandidateStatus, { label: string; color: stri
   }
 };
 
-export const STORAGE_KEY = 'recruitment_interview_members_v3';
-export const PANELS_STORAGE_KEY = 'recruitment_interview_panels_v1';
+export const STORAGE_KEY = 'recruitment_interview_members_v4';
+export const PANELS_STORAGE_KEY = 'recruitment_interview_panels_v2';
+
 

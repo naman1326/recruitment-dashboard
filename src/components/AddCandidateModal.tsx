@@ -27,6 +27,7 @@ export const AddCandidateModal: React.FC<AddCandidateModalProps> = ({
   const [domainPref1, setDomainPref1] = useState('');
   const [domainPref2, setDomainPref2] = useState('');
   const [status, setStatus] = useState<CandidateStatus>('scheduled');
+  const [category, setCategory] = useState<string>('');
   const [notes, setNotes] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -47,6 +48,7 @@ export const AddCandidateModal: React.FC<AddCandidateModalProps> = ({
       domainPref1: domainPref1.trim() || undefined,
       domainPref2: domainPref2.trim() || undefined,
       status,
+      category: category ? category : undefined,
       notes: notes.trim() || undefined,
       createdAt: new Date().toISOString()
     };
@@ -148,6 +150,19 @@ export const AddCandidateModal: React.FC<AddCandidateModalProps> = ({
                   <option value="completed">Completed</option>
                   <option value="on-hold">On Hold</option>
                   <option value="absent">Absent</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Category / Tag</label>
+                <select 
+                  className="form-select"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="">Standard Candidate</option>
+                  <option value="Filled Form Late">Filled Form Late</option>
+                  <option value="Missed First Interview">Missed First Interview</option>
                 </select>
               </div>
 

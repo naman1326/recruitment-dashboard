@@ -149,13 +149,23 @@ export const CandidateDetailModal: React.FC<CandidateDetailModalProps> = ({
                 {candidate.rollNo && (
                   <span className="roll-badge">{candidate.rollNo}</span>
                 )}
-                <span style={{ fontSize: '0.8rem', color: panelConfig.color, fontWeight: 600 }}>
+                <span style={{ fontSize: '0.8rem', color: panelConfig ? panelConfig.color : 'var(--brand-saffron)', fontWeight: 600 }}>
                   {panel}
                 </span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>•</span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
                   {timeSlot}
                 </span>
+                {(candidate.category || initialMatch?.category) && (
+                  <>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>•</span>
+                    <span 
+                      className={`badge-category ${(candidate.category || initialMatch?.category) === 'Filled Form Late' ? 'badge-category-late' : 'badge-category-missed'}`}
+                    >
+                      {(candidate.category || initialMatch?.category) === 'Filled Form Late' ? 'Late Form' : 'Missed 1st Interview'}
+                    </span>
+                  </>
+                )}
               </div>
             </div>
 

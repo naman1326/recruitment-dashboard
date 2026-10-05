@@ -12,6 +12,8 @@ interface FilterBarProps {
   onSelectSlot: (s: TimeSlotType | 'ALL') => void;
   selectedStatus: CandidateStatus | 'ALL';
   onSelectStatus: (st: CandidateStatus | 'ALL') => void;
+  selectedCategory: string | 'ALL';
+  onSelectCategory: (cat: string | 'ALL') => void;
   viewMode: ViewMode;
   onViewModeChange: (m: ViewMode) => void;
   totalFiltered: number;
@@ -28,6 +30,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onSelectSlot,
   selectedStatus,
   onSelectStatus,
+  selectedCategory,
+  onSelectCategory,
   viewMode,
   onViewModeChange,
   totalFiltered,
@@ -38,7 +42,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
     searchQuery !== '' || 
     selectedPanel !== 'ALL' || 
     selectedSlot !== 'ALL' || 
-    selectedStatus !== 'ALL';
+    selectedStatus !== 'ALL' ||
+    selectedCategory !== 'ALL';
 
   return (
     <div className="toolbar-container">
@@ -197,6 +202,36 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               style={selectedStatus === 'absent' ? { background: 'var(--duplicate)' } : undefined}
             >
               Absent
+            </button>
+          </div>
+        </div>
+
+        {/* Category filter */}
+        <div className="filter-group">
+          <span className="filter-label">Category:</span>
+          <div className="filter-chips">
+            <button 
+              type="button" 
+              className={`filter-chip ${selectedCategory === 'ALL' ? 'is-active' : ''}`}
+              onClick={() => onSelectCategory('ALL')}
+            >
+              All Categories
+            </button>
+            <button 
+              type="button" 
+              className={`filter-chip ${selectedCategory === 'Filled Form Late' ? 'is-active' : ''}`}
+              onClick={() => onSelectCategory('Filled Form Late')}
+              style={selectedCategory === 'Filled Form Late' ? { background: '#ff9933', color: '#000' } : undefined}
+            >
+              Late Form
+            </button>
+            <button 
+              type="button" 
+              className={`filter-chip ${selectedCategory === 'Missed First Interview' ? 'is-active' : ''}`}
+              onClick={() => onSelectCategory('Missed First Interview')}
+              style={selectedCategory === 'Missed First Interview' ? { background: '#ec4899', color: '#fff' } : undefined}
+            >
+              Missed 1st Interview
             </button>
           </div>
         </div>

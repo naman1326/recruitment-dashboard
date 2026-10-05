@@ -91,6 +91,14 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({
                 <span className="roll-badge">{candidate.rollNo}</span>
               )}
               <span className={panelTagClass}>{candidate.panel}</span>
+              {(candidate.category || initialMatch?.category) && (
+                <span 
+                  className={`badge-category ${(candidate.category || initialMatch?.category) === 'Filled Form Late' ? 'badge-category-late' : 'badge-category-missed'}`}
+                  title={candidate.category || initialMatch?.category}
+                >
+                  {(candidate.category || initialMatch?.category) === 'Filled Form Late' ? 'Late Form' : 'Missed 1st Interview'}
+                </span>
+              )}
             </div>
           </div>
         </div>
