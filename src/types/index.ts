@@ -12,7 +12,8 @@ export type TimeSlotType =
   | '10:00 - 10:30 PM'
   | '10:30 - 11:00 PM'
   | '11:00 - 11:30 PM'
-  | '11:30 PM - 12:00 AM';
+  | '11:30 PM - 12:00 AM'
+  | '12:00 - 12:30 AM';
 
 export type CandidateStatus = 'scheduled' | 'interviewing' | 'completed' | 'on-hold' | 'absent';
 

@@ -81,12 +81,14 @@ const DashboardContent: React.FC = () => {
             return {
               ...init,
               ...c,
+              domainPref1: init?.domainPref1 || c.domainPref1,
+              domainPref2: init?.domainPref2 || c.domainPref2,
               status,
               score,
               notes,
-              fitReason: c.fitReason || init?.fitReason || '',
-              clubMotivation: c.clubMotivation || init?.clubMotivation || '',
-              category: c.category || init?.category,
+              fitReason: init?.fitReason || c.fitReason || '',
+              clubMotivation: init?.clubMotivation || c.clubMotivation || '',
+              category: init?.category || c.category,
               timeSlot,
               preferredDept,
               updatedAt

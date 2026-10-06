@@ -12,7 +12,8 @@ export const TIME_SLOTS: { id: TimeSlotType; label: string; number: number; isOv
   { id: '10:00 - 10:30 PM', label: 'Slot 9 (10:00 - 10:30 PM - Panel 5)', number: 9 },
   { id: '10:30 - 11:00 PM', label: 'Slot 10 (10:30 - 11:00 PM - Panel 5)', number: 10 },
   { id: '11:00 - 11:30 PM', label: 'Slot 11 (11:00 - 11:30 PM - Panel 5)', number: 11 },
-  { id: '11:30 PM - 12:00 AM', label: 'Slot 12 (11:30 PM - 12:00 AM - Panel 5)', number: 12 }
+  { id: '11:30 PM - 12:00 AM', label: 'Slot 12 (11:30 PM - 12:00 AM - Panel 5)', number: 12 },
+  { id: '12:00 - 12:30 AM', label: 'Slot 13 (12:00 - 12:30 AM - Panel 5)', number: 13 }
 ];
 
 export const OLD_SLOT_MAP: Record<string, TimeSlotType> = {
@@ -24,7 +25,9 @@ export const OLD_SLOT_MAP: Record<string, TimeSlotType> = {
   '10:00-10:30pm': '10:00 - 10:30 PM',
   '10:30-11:00pm': '10:30 - 11:00 PM',
   '11:00-11:30pm': '11:00 - 11:30 PM',
-  '11:30-12:00pm': '11:30 PM - 12:00 AM'
+  '11:30-12:00pm': '11:30 PM - 12:00 AM',
+  '12:00-12:30pm': '12:00 - 12:30 AM',
+  '12:00-12:30am': '12:00 - 12:30 AM'
 };
 
 export const PANEL_LIST: PanelType[] = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4', 'Panel 5'];

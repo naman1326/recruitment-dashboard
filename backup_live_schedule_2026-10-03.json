@@ -1,7 +1,7 @@
 {
-  "room": "swarajya-recruitment-2026",
+  "room": "swarajya-recruitment-live-2026",
   "version": 2,
-  "updatedAt": "2026-10-03T06:15:17.096Z",
+  "updatedAt": "2026-10-06T18:47:29.050Z",
   "candidates": [
     {
       "id": "panel-1-1",
@@ -13,9 +13,10 @@
       "domainPref1": "Design and Content",
       "domainPref2": "Cultural",
       "status": "completed",
-      "notes": "",
+      "notes": "Design - Canva + Physical\n",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:03:29.790Z"
+      "updatedAt": "2026-10-03T07:11:26.309Z",
+      "preferredDept": "Design and Content"
     },
     {
       "id": "panel-1-2",
@@ -43,7 +44,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:07:25.592Z"
+      "updatedAt": "2026-10-05T15:53:28.162Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-1-4",
@@ -71,7 +73,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:12:46.191Z"
+      "updatedAt": "2026-10-03T07:03:27.696Z",
+      "preferredDept": "Finance And Outreach"
     },
     {
       "id": "panel-1-6",
@@ -85,7 +88,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:50:36.595Z"
+      "updatedAt": "2026-10-03T07:03:48.074Z",
+      "preferredDept": "Technical"
     },
     {
       "id": "panel-1-7",
@@ -113,7 +117,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:58:29.128Z"
+      "updatedAt": "2026-10-03T07:04:03.728Z",
+      "preferredDept": "Design and Content"
     },
     {
       "id": "panel-1-9",
@@ -127,7 +132,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T06:04:21.806Z"
+      "updatedAt": "2026-10-03T07:04:10.737Z",
+      "preferredDept": "Design and Content"
     },
     {
       "id": "panel-1-10",
@@ -141,7 +147,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T06:15:17.096Z"
+      "updatedAt": "2026-10-03T07:04:19.458Z",
+      "preferredDept": "Finance And Outreach"
     },
     {
       "id": "panel-1-11",
@@ -152,9 +159,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Social Media",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-03T07:04:29.940Z"
     },
     {
       "id": "panel-1-12",
@@ -165,9 +174,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Technical",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-05T16:49:40.092Z",
+      "preferredDept": "Finance And Outreach"
     },
     {
       "id": "panel-1-13",
@@ -178,23 +189,10 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Technical",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
-    },
-    {
-      "id": "panel-1-14",
-      "name": "B Srusty",
-      "rollNo": "26BCE1511",
-      "mobile": "8895244901",
-      "panel": "Panel 1",
-      "timeSlot": "12:00 - 12:30 PM",
-      "domainPref1": "Design and Content",
-      "domainPref2": "Finance And Outreach",
       "status": "absent",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:22:55.163Z"
+      "updatedAt": "2026-10-03T06:37:43.243Z"
     },
     {
       "id": "panel-1-15",
@@ -205,9 +203,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Finance And Outreach",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-05T15:53:49.453Z"
     },
     {
       "id": "panel-1-16",
@@ -218,9 +218,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Social Media",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-05T15:56:17.246Z"
     },
     {
       "id": "panel-1-17",
@@ -234,7 +236,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:18:07.915Z"
+      "updatedAt": "2026-10-05T15:56:22.645Z",
+      "preferredDept": "Technical"
     },
     {
       "id": "panel-1-18",
@@ -245,9 +248,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Operations",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "good at sketching",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-03T07:34:58.124Z"
     },
     {
       "id": "panel-1-19",
@@ -258,9 +263,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Technical",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "well spoken",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-05T15:56:06.699Z"
     },
     {
       "id": "panel-1-20",
@@ -271,9 +278,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Technical",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:38:17.963Z"
     },
     {
       "id": "panel-1-21",
@@ -284,9 +292,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Technical",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "script writing",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-03T09:43:09.543Z"
     },
     {
       "id": "panel-1-22",
@@ -297,9 +307,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Cultural",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "very expeirienced in design (canva + blender)",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-03T09:43:04.022Z"
     },
     {
       "id": "panel-1-23",
@@ -310,9 +322,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Technical",
       "domainPref2": "Operations",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "experienced in web dev, have very decent technical knowledge",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-03T09:49:58.768Z"
     },
     {
       "id": "panel-1-24",
@@ -323,9 +337,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Finance And Outreach",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Finance And Outreach",
+      "updatedAt": "2026-10-03T10:00:42.082Z"
     },
     {
       "id": "panel-1-25",
@@ -336,9 +352,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Technical",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "decent technical knowledge and also decent design work on figma and canva",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-03T10:11:22.414Z"
     },
     {
       "id": "panel-2-26",
@@ -352,7 +370,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:17:34.459Z"
+      "updatedAt": "2026-10-03T07:10:43.262Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-27",
@@ -363,10 +382,11 @@
       "timeSlot": "10:30 - 11:00 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "on-hold",
+      "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:09:46.673Z"
+      "updatedAt": "2026-10-03T10:17:03.496Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-28",
@@ -394,7 +414,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:04:58.186Z"
+      "updatedAt": "2026-10-03T07:10:34.704Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-30",
@@ -419,10 +440,10 @@
       "timeSlot": "10:30 - 11:00 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "on-hold",
+      "status": "absent",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:20:44.241Z"
+      "updatedAt": "2026-10-03T11:09:03.153Z"
     },
     {
       "id": "panel-2-32",
@@ -436,7 +457,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:38:02.295Z"
+      "updatedAt": "2026-10-03T07:10:46.239Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-33",
@@ -450,7 +472,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:41:50.178Z"
+      "updatedAt": "2026-10-03T07:10:48.931Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-34",
@@ -464,7 +487,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:47:52.717Z"
+      "updatedAt": "2026-10-03T07:10:52.102Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-35",
@@ -475,10 +499,10 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "on-hold",
+      "status": "absent",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:24:31.384Z"
+      "updatedAt": "2026-10-03T10:18:58.550Z"
     },
     {
       "id": "panel-2-36",
@@ -492,7 +516,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:54:56.304Z"
+      "updatedAt": "2026-10-03T07:10:55.380Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-37",
@@ -503,9 +528,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T07:10:25.343Z"
     },
     {
       "id": "panel-2-38",
@@ -516,9 +543,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T07:09:48.979Z"
     },
     {
       "id": "panel-2-39",
@@ -529,9 +558,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T07:10:11.201Z"
     },
     {
       "id": "panel-2-40",
@@ -545,7 +576,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:06:45.576Z"
+      "updatedAt": "2026-10-03T07:09:57.322Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-2-41",
@@ -556,9 +588,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T07:10:01.400Z"
     },
     {
       "id": "panel-2-42",
@@ -569,9 +603,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T07:15:31.625Z"
     },
     {
       "id": "panel-2-43",
@@ -585,7 +621,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:01:42.158Z"
+      "updatedAt": "2026-10-03T07:10:27.924Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-44",
@@ -596,9 +633,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T10:16:28.522Z"
     },
     {
       "id": "panel-2-45",
@@ -609,9 +648,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:15:41.644Z"
     },
     {
       "id": "panel-2-46",
@@ -622,9 +662,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:20:43.768Z",
+      "preferredDept": "ops, skit or drama"
     },
     {
       "id": "panel-2-47",
@@ -635,9 +677,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-06T17:44:33.364Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-48",
@@ -648,10 +692,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "absent",
+      "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:24:01.580Z"
+      "updatedAt": "2026-10-06T17:29:20.649Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-49",
@@ -662,9 +707,10 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:19:43.927Z"
     },
     {
       "id": "panel-2-50",
@@ -675,9 +721,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T09:47:27.898Z"
     },
     {
       "id": "panel-2-51",
@@ -688,9 +736,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:15:03.657Z",
+      "preferredDept": "Finance And Outreach"
     },
     {
       "id": "panel-2-52",
@@ -701,9 +751,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:20:09.643Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-53",
@@ -714,9 +766,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T10:38:14.079Z"
     },
     {
       "id": "panel-2-54",
@@ -727,9 +781,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:21:06.455Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-2-55",
@@ -740,9 +796,10 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T11:03:29.424Z"
     },
     {
       "id": "panel-2-56",
@@ -753,9 +810,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T11:10:48.544Z"
     },
     {
       "id": "panel-3-57",
@@ -769,7 +828,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:09:25.481Z"
+      "updatedAt": "2026-10-03T07:09:49.301Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-58",
@@ -783,7 +843,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:40:22.705Z"
+      "updatedAt": "2026-10-03T07:09:51.089Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-59",
@@ -797,7 +858,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:19:46.353Z"
+      "updatedAt": "2026-10-03T07:09:52.633Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-60",
@@ -811,7 +873,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:49:07.586Z"
+      "updatedAt": "2026-10-03T07:46:14.663Z",
+      "preferredDept": "Design and Content"
     },
     {
       "id": "panel-3-61",
@@ -825,7 +888,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:54:26.974Z"
+      "updatedAt": "2026-10-03T07:09:56.751Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-62",
@@ -839,7 +903,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T06:05:26.908Z"
+      "updatedAt": "2026-10-03T07:45:58.758Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-63",
@@ -853,7 +918,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T06:14:55.776Z"
+      "updatedAt": "2026-10-03T07:45:57.540Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-64",
@@ -864,9 +930,10 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T06:16:07.829Z"
     },
     {
       "id": "panel-3-65",
@@ -877,9 +944,11 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-06T17:17:56.749Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-66",
@@ -890,9 +959,11 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:46:03.670Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-67",
@@ -903,9 +974,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:46:30.790Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-68",
@@ -916,9 +989,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:34:56.420Z",
+      "preferredDept": "Social Media"
     },
     {
       "id": "panel-3-69",
@@ -929,9 +1004,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:47:39.842Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-70",
@@ -942,9 +1019,10 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T06:51:52.132Z"
     },
     {
       "id": "panel-3-71",
@@ -955,9 +1033,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:47:50.250Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-72",
@@ -968,9 +1048,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "confident, has decent operational knowledge, interested in anchoring if give  the chance",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T09:28:04.040Z",
+      "preferredDept": "Operations"
     },
     {
       "id": "panel-3-73",
@@ -981,9 +1063,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:06:45.147Z"
     },
     {
       "id": "panel-3-74",
@@ -994,9 +1077,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T11:06:01.815Z"
     },
     {
       "id": "panel-3-75",
@@ -1007,9 +1091,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T11:07:53.289Z"
     },
     {
       "id": "panel-3-76",
@@ -1020,9 +1106,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T10:02:43.983Z"
     },
     {
       "id": "panel-3-77",
@@ -1033,9 +1121,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T11:05:10.887Z"
     },
     {
       "id": "panel-3-78",
@@ -1046,9 +1136,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Social Media",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T11:05:13.238Z"
     },
     {
       "id": "panel-3-79",
@@ -1059,9 +1151,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Finance And Outreach",
+      "updatedAt": "2026-10-03T11:05:15.619Z"
     },
     {
       "id": "panel-3-80",
@@ -1072,9 +1166,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T11:05:19.346Z"
     },
     {
       "id": "panel-3-81",
@@ -1085,9 +1181,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T11:05:22.398Z"
     },
     {
       "id": "panel-3-82",
@@ -1098,9 +1196,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T11:05:26.167Z"
     },
     {
       "id": "panel-3-83",
@@ -1111,9 +1211,10 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T11:08:01.237Z"
     },
     {
       "id": "panel-3-84",
@@ -1124,9 +1225,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Operations",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-03T11:05:29.648Z"
     },
     {
       "id": "panel-4-85",
@@ -1168,8 +1271,9 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:56:05.062Z",
-      "score": 8.5
+      "score": 8.5,
+      "updatedAt": "2026-10-03T06:32:58.812Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-88",
@@ -1183,8 +1287,9 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:56:18.927Z",
-      "score": 7.5
+      "score": 7.5,
+      "updatedAt": "2026-10-03T06:33:01.070Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-89",
@@ -1198,22 +1303,9 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:56:27.129Z",
-      "score": 8
-    },
-    {
-      "id": "panel-4-90",
-      "name": "Anvesh Shendkar",
-      "rollNo": "26BCE1234",
-      "mobile": "8850223837",
-      "panel": "Panel 4",
-      "timeSlot": "11:15 - 11:45 AM",
-      "domainPref1": "Cultural",
-      "domainPref2": "Design and Content",
-      "status": "absent",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:56:52.227Z"
+      "score": 8,
+      "updatedAt": "2026-10-03T06:32:47.962Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-91",
@@ -1238,11 +1330,12 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
       "score": 8,
-      "updatedAt": "2026-10-03T05:55:39.950Z"
+      "updatedAt": "2026-10-03T06:32:28.551Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-93",
@@ -1253,9 +1346,12 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 9.5,
+      "updatedAt": "2026-10-03T06:32:35.115Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-94",
@@ -1266,9 +1362,12 @@
       "timeSlot": "11:15 - 11:45 AM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "score": 7,
+      "updatedAt": "2026-10-03T06:32:19.855Z"
     },
     {
       "id": "panel-4-95",
@@ -1279,9 +1378,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T09:54:35.225Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-96",
@@ -1292,9 +1393,12 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "score": 9,
+      "updatedAt": "2026-10-03T10:28:03.259Z"
     },
     {
       "id": "panel-4-97",
@@ -1308,7 +1412,8 @@
       "status": "completed",
       "notes": "",
       "createdAt": "2026-10-03T10:00:00.000Z",
-      "updatedAt": "2026-10-03T05:29:30.902Z"
+      "updatedAt": "2026-10-03T06:33:20.084Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-98",
@@ -1319,9 +1424,11 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Social Media",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T09:54:40.882Z",
+      "preferredDept": "Cultural"
     },
     {
       "id": "panel-4-99",
@@ -1332,9 +1439,12 @@
       "timeSlot": "12:00 - 12:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 8.5,
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T08:04:30.450Z"
     },
     {
       "id": "panel-4-100",
@@ -1345,9 +1455,12 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "score": 9.5,
+      "updatedAt": "2026-10-03T07:56:09.525Z"
     },
     {
       "id": "panel-4-101",
@@ -1358,9 +1471,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:56:15.489Z"
     },
     {
       "id": "panel-4-102",
@@ -1371,9 +1485,11 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Finance And Outreach",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 7,
+      "updatedAt": "2026-10-03T07:56:17.956Z"
     },
     {
       "id": "panel-4-103",
@@ -1384,9 +1500,12 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Social Media",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "score": 8.5,
+      "updatedAt": "2026-10-03T07:56:07.256Z"
     },
     {
       "id": "panel-4-104",
@@ -1397,9 +1516,10 @@
       "timeSlot": "12:45 - 1:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T07:56:02.639Z"
     },
     {
       "id": "panel-4-105",
@@ -1410,9 +1530,10 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:28:14.930Z"
     },
     {
       "id": "panel-4-106",
@@ -1423,9 +1544,12 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 7.5,
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-03T10:28:37.345Z"
     },
     {
       "id": "panel-4-107",
@@ -1436,9 +1560,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 9,
+      "updatedAt": "2026-10-03T10:28:40.744Z"
     },
     {
       "id": "panel-4-108",
@@ -1449,9 +1575,12 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 7,
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T10:28:43.507Z"
     },
     {
       "id": "panel-4-109",
@@ -1462,9 +1591,11 @@
       "timeSlot": "3:00 - 3:30 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T10:28:47.026Z"
     },
     {
       "id": "panel-4-110",
@@ -1475,9 +1606,12 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Design and Content",
-      "status": "scheduled",
+      "status": "completed",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "score": 8,
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T10:48:21.357Z"
     },
     {
       "id": "panel-4-111",
@@ -1488,9 +1622,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Operations",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "dhol, drum, ops, acting",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T10:56:57.414Z"
     },
     {
       "id": "panel-4-112",
@@ -1501,9 +1637,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Design and Content",
       "domainPref2": "Social Media",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "canva + video editing ",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-03T10:48:14.540Z"
     },
     {
       "id": "panel-4-113",
@@ -1514,9 +1652,11 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Operations",
       "domainPref2": "Cultural",
-      "status": "scheduled",
-      "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "status": "completed",
+      "notes": "ops, skit, singing+guitar",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-03T11:12:48.969Z"
     },
     {
       "id": "panel-4-114",
@@ -1527,9 +1667,460 @@
       "timeSlot": "3:45 - 4:15 PM",
       "domainPref1": "Cultural",
       "domainPref2": "Technical",
-      "status": "scheduled",
+      "status": "absent",
       "notes": "",
-      "createdAt": "2026-10-03T10:00:00.000Z"
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T11:10:05.710Z"
+    },
+    {
+      "id": "panel-5-1",
+      "name": "Salah Amjad Zingu",
+      "rollNo": "26BCE1538",
+      "mobile": "7387674828",
+      "panel": "Panel 5",
+      "timeSlot": "9:30 - 10:00 PM",
+      "domainPref1": "Technical",
+      "domainPref2": "Finance And Outreach",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-05T16:29:03.552Z"
+    },
+    {
+      "id": "panel-5-2",
+      "name": "Imaad Khot",
+      "rollNo": "26BCE1641",
+      "mobile": "9545996645",
+      "panel": "Panel 5",
+      "timeSlot": "9:30 - 10:00 PM",
+      "domainPref1": "Design and Content",
+      "domainPref2": "Finance And Outreach",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "good at canva & design. ",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-05T16:18:19.800Z"
+    },
+    {
+      "id": "panel-5-3",
+      "name": "Shiv Rajiv Pimpale",
+      "rollNo": "26BDS1091",
+      "mobile": "7796884534",
+      "panel": "Panel 5",
+      "timeSlot": "9:30 - 10:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Finance And Outreach",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-05T16:32:41.202Z"
+    },
+    {
+      "id": "panel-5-4",
+      "name": "Aditya Upadhyay",
+      "rollNo": "25BCE5448",
+      "mobile": "9327940223",
+      "panel": "Panel 5",
+      "timeSlot": "9:30 - 10:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Finance And Outreach",
+      "status": "absent",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "updatedAt": "2026-10-05T17:18:11.121Z"
+    },
+    {
+      "id": "panel-5-5",
+      "name": "Ojas Londhe",
+      "rollNo": "26BCE5235",
+      "mobile": "9970347579",
+      "panel": "Panel 5",
+      "timeSlot": "9:30 - 10:00 PM",
+      "domainPref1": "Technical",
+      "domainPref2": "Finance And Outreach",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Finance And Outreach",
+      "updatedAt": "2026-10-05T16:50:11.238Z"
+    },
+    {
+      "id": "panel-5-6",
+      "name": "Om Mahendra Gawde",
+      "rollNo": "26BAI1297",
+      "mobile": "8850244933",
+      "panel": "Panel 5",
+      "timeSlot": "10:00 - 10:30 PM",
+      "domainPref1": "Operations",
+      "domainPref2": "Technical",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Social Media",
+      "updatedAt": "2026-10-05T16:56:04.862Z"
+    },
+    {
+      "id": "panel-5-7",
+      "name": "Harshit Modi",
+      "rollNo": "26BCE1928",
+      "mobile": "7977366085",
+      "panel": "Panel 5",
+      "timeSlot": "10:00 - 10:30 PM",
+      "domainPref1": "Technical",
+      "domainPref2": "Design and Content",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-05T17:05:56.748Z"
+    },
+    {
+      "id": "panel-5-9",
+      "name": "Ishan Sachin Vaidya",
+      "rollNo": "25BCE1197",
+      "mobile": "9270424301",
+      "panel": "Panel 5",
+      "timeSlot": "10:00 - 10:30 PM",
+      "domainPref1": "Technical",
+      "domainPref2": "Operations",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-05T17:15:28.211Z"
+    },
+    {
+      "id": "panel-5-10",
+      "name": "Vikram N Savant",
+      "rollNo": "26BYB1123",
+      "mobile": "8431248225",
+      "panel": "Panel 5",
+      "timeSlot": "10:00 - 10:30 PM",
+      "domainPref1": "Technical",
+      "domainPref2": "Operations",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Technical",
+      "updatedAt": "2026-10-05T17:24:10.077Z"
+    },
+    {
+      "id": "panel-5-11",
+      "name": "Anushka Giri",
+      "rollNo": "26BCE1367",
+      "mobile": "7047637487",
+      "panel": "Panel 5",
+      "timeSlot": "10:30 - 11:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Design and Content",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-05T17:33:05.890Z"
+    },
+    {
+      "id": "panel-5-12",
+      "name": "Avishi Punhani",
+      "rollNo": "25BCE5212",
+      "mobile": "9416390455",
+      "panel": "Panel 5",
+      "timeSlot": "10:30 - 11:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Design and Content",
+      "status": "absent",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "updatedAt": "2026-10-05T17:34:17.905Z"
+    },
+    {
+      "id": "panel-5-13",
+      "name": "Khemani Riya",
+      "rollNo": "26BAI1280",
+      "mobile": "9664737022",
+      "panel": "Panel 5",
+      "timeSlot": "10:30 - 11:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Design and Content",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-05T17:41:17.506Z"
+    },
+    {
+      "id": "panel-5-14",
+      "name": "Tanisha Ratnaparkhi",
+      "rollNo": "26BVD1033",
+      "mobile": "7387485800",
+      "panel": "Panel 5",
+      "timeSlot": "10:30 - 11:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Social Media",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations (dhol tasha)",
+      "updatedAt": "2026-10-05T17:45:14.569Z"
+    },
+    {
+      "id": "panel-5-15",
+      "name": "Ipshita Suman",
+      "rollNo": "26BCE1893",
+      "mobile": "7979085128",
+      "panel": "Panel 5",
+      "timeSlot": "10:30 - 11:00 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Technical",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural or design",
+      "updatedAt": "2026-10-05T17:53:25.476Z"
+    },
+    {
+      "id": "panel-5-16",
+      "name": "Harshita Ganesh Mahajan",
+      "rollNo": "26BCE5432",
+      "mobile": "9272124738",
+      "panel": "Panel 5",
+      "timeSlot": "11:00 - 11:30 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Operations",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-06T14:01:12.412Z"
+    },
+    {
+      "id": "panel-5-17",
+      "name": "Mansi Ketan Landge",
+      "rollNo": "26BCE1613",
+      "mobile": "8217415249",
+      "panel": "Panel 5",
+      "timeSlot": "11:00 - 11:30 PM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Operations",
+      "status": "scheduled",
+      "category": "Missed First Interview",
+      "notes": "Bharatnatyam",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Cultural",
+      "updatedAt": "2026-10-05T18:07:38.392Z"
+    },
+    {
+      "id": "panel-5-18",
+      "name": "Dhruv jagtap",
+      "rollNo": "26BME1120",
+      "mobile": "9529245734",
+      "panel": "Panel 5",
+      "timeSlot": "11:00 - 11:30 PM",
+      "domainPref1": "Social Media",
+      "domainPref2": "Operations",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-06T16:15:57.008Z"
+    },
+    {
+      "id": "panel-5-19",
+      "name": "Shreyas Patre",
+      "rollNo": "25BAI1560",
+      "mobile": "7507290701",
+      "panel": "Panel 5",
+      "timeSlot": "11:00 - 11:30 PM",
+      "domainPref1": "Design and Content",
+      "domainPref2": "Social Media",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Design and Content",
+      "updatedAt": "2026-10-06T16:27:43.340Z"
+    },
+    {
+      "id": "panel-5-20",
+      "name": "Kamlesh Gajanan Varma",
+      "rollNo": "26BLC1340",
+      "mobile": "7249209948",
+      "panel": "Panel 5",
+      "timeSlot": "11:00 - 11:30 PM",
+      "domainPref1": "Operations",
+      "domainPref2": "Cultural",
+      "status": "completed",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-06T16:35:19.503Z"
+    },
+    {
+      "id": "panel-5-21",
+      "name": "Garima Choudhari",
+      "rollNo": "26BCE5031",
+      "mobile": "7083515800",
+      "panel": "Panel 5",
+      "timeSlot": "11:30 PM - 12:00 AM",
+      "domainPref1": "Social Media",
+      "domainPref2": "Design and Content",
+      "status": "absent",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "updatedAt": "2026-10-06T16:46:23.263Z"
+    },
+    {
+      "id": "panel-5-22",
+      "name": "Bhakti Sharma",
+      "rollNo": "26BDS1017",
+      "mobile": "9172794229",
+      "panel": "Panel 5",
+      "timeSlot": "11:30 PM - 12:00 AM",
+      "domainPref1": "Operations",
+      "domainPref2": "Cultural",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-06T16:45:11.113Z"
+    },
+    {
+      "id": "panel-5-23",
+      "name": "Shivam Morbale",
+      "rollNo": "26BCE5579",
+      "mobile": "9136471329",
+      "panel": "Panel 5",
+      "timeSlot": "11:30 PM - 12:00 AM",
+      "domainPref1": "Design and Content",
+      "domainPref2": "Cultural",
+      "status": "absent",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "updatedAt": "2026-10-06T16:46:35.925Z"
+    },
+    {
+      "id": "panel-5-24",
+      "name": "Sanskruti Sanjay Chavan",
+      "rollNo": "26BCE5084",
+      "mobile": "7097700808",
+      "panel": "Panel 5",
+      "timeSlot": "11:30 PM - 12:00 AM",
+      "domainPref1": "Design and Content",
+      "domainPref2": "Operations",
+      "status": "completed",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-06T16:58:01.136Z"
+    },
+    {
+      "id": "panel-5-25",
+      "name": "Shashank Shekhar Pal",
+      "rollNo": "26BCE5583",
+      "mobile": "8290491473",
+      "panel": "Panel 5",
+      "timeSlot": "11:30 PM - 12:00 AM",
+      "domainPref1": "Operations",
+      "domainPref2": "Cultural",
+      "status": "scheduled",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "preferredDept": "Operations",
+      "updatedAt": "2026-10-06T17:09:23.869Z"
+    },
+    {
+      "id": "panel-4-90",
+      "name": "Anvesh Shendkar",
+      "rollNo": "26BCE1234",
+      "mobile": "8850223837",
+      "panel": "Panel 4",
+      "timeSlot": "11:15 - 11:45 AM",
+      "domainPref1": "Cultural",
+      "domainPref2": "Design and Content",
+      "status": "absent",
+      "notes": "",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T05:56:52.227Z"
+    },
+    {
+      "id": "panel-5-8",
+      "name": "Kalidindi Hashvanth Venkata Siva Ram",
+      "rollNo": "25BDS1158",
+      "mobile": "9390911111",
+      "panel": "Panel 5",
+      "timeSlot": "10:00 - 10:30 PM",
+      "domainPref1": "Social Media",
+      "domainPref2": "Technical",
+      "status": "scheduled",
+      "category": "Missed First Interview",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z"
+    },
+    {
+      "id": "panel-5-26",
+      "name": "Kalpak Pankaj Yawalkar",
+      "rollNo": "26BCE1927",
+      "mobile": "8454945257",
+      "panel": "Panel 5",
+      "timeSlot": "12:00 - 12:30 AM",
+      "domainPref1": "Finance And Outreach",
+      "domainPref2": "Technical",
+      "status": "scheduled",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z"
+    },
+    {
+      "id": "panel-5-27",
+      "name": "Naman",
+      "rollNo": "26BCE1432",
+      "mobile": "9225534862",
+      "panel": "Panel 5",
+      "timeSlot": "12:00 - 12:30 AM",
+      "domainPref1": "Operations",
+      "domainPref2": "Technical",
+      "status": "scheduled",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-05T10:00:00.000Z"
+    },
+    {
+      "id": "panel-5-28",
+      "name": "Chinmay Patil",
+      "rollNo": "26BLC1147",
+      "mobile": "9890831204",
+      "panel": "Panel 5",
+      "timeSlot": "12:00 - 12:30 AM",
+      "domainPref1": "Operations",
+      "domainPref2": "Social Media",
+      "status": "scheduled",
+      "category": "Filled Form Late",
+      "notes": "",
+      "createdAt": "2026-10-06T18:45:00.000Z"
     }
   ]
 }

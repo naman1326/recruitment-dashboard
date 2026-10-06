@@ -87,6 +87,8 @@ export function useCloudSync({
         return {
           ...init,
           ...rem,
+          domainPref1: init?.domainPref1 || rem.domainPref1,
+          domainPref2: init?.domainPref2 || rem.domainPref2,
           timeSlot,
           fitReason: rem.fitReason || init?.fitReason || '',
           clubMotivation: rem.clubMotivation || init?.clubMotivation || '',
@@ -124,7 +126,12 @@ export function useCloudSync({
           i.name.toLowerCase() === rem.name.toLowerCase()
         );
 
-        if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent || isDeptDifferent) {
+        const isPrefDifferent = Boolean(
+          (init?.domainPref1 && loc.domainPref1 !== init.domainPref1) ||
+          (init?.domainPref2 && loc.domainPref2 !== init.domainPref2)
+        );
+
+        if (isStatusDifferent || isScoreDifferent || isNotesDifferent || isSlotDifferent || isDeptDifferent || isPrefDifferent) {
           const remEvaluated = rem.status !== 'scheduled' || rem.score !== undefined || (rem.notes && rem.notes.trim()) || rem.preferredDept;
           const locEvaluated = loc.status !== 'scheduled' || loc.score !== undefined || (loc.notes && loc.notes.trim()) || loc.preferredDept;
 
@@ -141,29 +148,40 @@ export function useCloudSync({
             const chosen: Candidate = {
               ...init,
               ...rem,
+              domainPref1: init?.domainPref1 || rem.domainPref1,
+              domainPref2: init?.domainPref2 || rem.domainPref2,
               preferredDept: rem.preferredDept || loc.preferredDept,
               fitReason: rem.fitReason || loc.fitReason || init?.fitReason || '',
               clubMotivation: rem.clubMotivation || loc.clubMotivation || init?.clubMotivation || '',
             };
             merged.push(chosen);
             hasChanges = true;
-            lastChangedCandidate = chosen;
-            lastOldCandidate = loc;
+            if (isStatusDifferent || isScoreDifferent || isNotesDifferent) {
+              lastChangedCandidate = chosen;
+              lastOldCandidate = loc;
+            }
           } else {
             const chosen: Candidate = {
               ...init,
               ...loc,
+              domainPref1: init?.domainPref1 || loc.domainPref1,
+              domainPref2: init?.domainPref2 || loc.domainPref2,
               preferredDept: loc.preferredDept || rem.preferredDept,
               fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
               clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
             };
             merged.push(chosen);
+            if (isPrefDifferent) {
+              hasChanges = true;
+            }
           }
         } else {
           // Keep current state but ensure questionnaire answers and department are populated
           const chosen: Candidate = {
             ...init,
             ...loc,
+            domainPref1: init?.domainPref1 || loc.domainPref1,
+            domainPref2: init?.domainPref2 || loc.domainPref2,
             preferredDept: loc.preferredDept || rem.preferredDept,
             fitReason: loc.fitReason || rem.fitReason || init?.fitReason || '',
             clubMotivation: loc.clubMotivation || rem.clubMotivation || init?.clubMotivation || '',
@@ -171,7 +189,25 @@ export function useCloudSync({
           if (!loc.fitReason && chosen.fitReason) {
             hasChanges = true;
           }
+          if (loc.domainPref2 !== chosen.domainPref2 || loc.domainPref1 !== chosen.domainPref1) {
+            hasChanges = true;
+          }
           merged.push(chosen);
+        }
+      }
+
+      // Ensure any candidates from INITIAL_CANDIDATES (e.g. newly added Panel 5 candidates) missing in remote are preserved
+      const mergedIds = new Set(merged.map(c => c.id));
+      for (const loc of candidatesRef.current) {
+        if (!mergedIds.has(loc.id)) {
+          merged.push(loc);
+          hasChanges = true;
+        }
+      }
+      for (const initCand of INITIAL_CANDIDATES) {
+        if (!mergedIds.has(initCand.id)) {
+          merged.push(initCand);
+          hasChanges = true;
         }
       }
 
